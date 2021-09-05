@@ -6,12 +6,12 @@ allemaal heb gedaan om uiteindelijk tot een toffe website te komen.
 ## Over mij
 
 <details open>
-<summary>uitwerken voor kick-off werkgroep</summary>
+<summary>Benieuwd naar wat ik ga doen voor dit vak? Klik hier!</summary>
 
 ### Auteur:
 Maijla Ikiz
 
-#### Je startniveau:
+#### Mijn startniveau:
 Voor dit vak zal mijn startniveau de Zwarte Piste zijn. Ik ben momenteel al
 bijna drie jaar werkzaam bij een bedrijf als designer en front-end developer.
 Voordat ik bij CMD kwam heb ik de studie Software Engineering gevolgd, ik weet
@@ -26,7 +26,7 @@ Ik had enorm veel plezier in het bouwen van de website en het leren van nieuwe
 technieken, daarom ben ik van plan om voor dit vak met dezelfde houding te gaan
 starten! :D
 
-#### Je focus:
+#### Mijn focus:
 Mijn focus zal een combinatie worden van responsiviteit en extra aandacht voor
 de Surface laag. Voor de Surface laag waren een aantal onderwerpen waaruit ik
 kan kiezen. Uit deze onderwerpen heb ik er vijf gekozen:
@@ -65,7 +65,7 @@ hier de naam van de pagina
 
 
 
-
+<!--
 ## Breakdownschets (week 1)
 
 <details>
@@ -251,4 +251,4 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 2. bron 2
 3. ...
 
-</details>
+</details> -->
