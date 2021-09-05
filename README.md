@@ -10,6 +10,7 @@ allemaal heb gedaan om uiteindelijk tot een toffe website te komen.
 
 ### Auteur:
 Maijla Ikiz [(portfolio)](https://oege.ie.hva.nl/~ikizm001/noyamirai.io/ "Maijla's Portfolio")
+
 #### Mijn startniveau:
 Voor dit vak zal mijn startniveau de Zwarte Piste zijn. Ik ben momenteel al
 bijna drie jaar werkzaam bij een bedrijf als designer en front-end developer.
@@ -26,8 +27,8 @@ Ik had enorm veel plezier in het bouwen van de website en het leren van nieuwe
 technieken, daarom ben ik van plan om voor dit vak met dezelfde houding te gaan
 starten! :D
 
-#### Mijn focus:
-Mijn focus zal een combinatie worden van responsiviteit en extra aandacht voor
+#### Projectfocus:
+De focus zal een combinatie worden van responsiviteit en extra aandacht voor
 de Surface laag. Voor de Surface laag waren een aantal onderwerpen waaruit ik
 kan kiezen. Uit deze onderwerpen heb ik er vijf gekozen:
 
