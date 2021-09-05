@@ -6,7 +6,7 @@ allemaal heb gedaan om uiteindelijk tot een toffe website te komen.
 ## Over mij
 
 <details open>
-<summary>Benieuwd naar wat ik ga doen voor dit vak? Klik hier!</summary>
+<summary>Benieuwd naar wie ik ben? Klik hier!</summary>
 
 ### Auteur:
 Maijla Ikiz
@@ -41,13 +41,10 @@ kan kiezen. Uit deze onderwerpen heb ik er vijf gekozen:
 </details>
 
 
-
-
-
-## Je website
+## Over het project
 
 <details open>
-<summary>uitwerken voor kick-off werkgroep</summary>
+<summary>Lees hier de debriefing van Night City Living</summary>
 
 ### Je opdracht:
 link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
