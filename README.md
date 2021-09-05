@@ -1,29 +1,43 @@
-# Procesverslag
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+# Night City Living - Procesverslag - FED211
+Welkom bij mijn Front-end Development project genaamd Night City Living! In dit
+verslag laat ik gedurende het eerste blok van leerjaar 2021/2022 zien wat ik
+allemaal heb gedaan om uiteindelijk tot een toffe website te komen.
 
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
-
-
-
-
-## Jij
+## Over mij
 
 <details open>
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Auteur:
-Sanne 't Hooft (vervangen door jouw naam)
+Maijla Ikiz
 
 #### Je startniveau:
-hier je startniveau (kies uit zwart, rood óf blauw)
+Voor dit vak zal mijn startniveau de Zwarte Piste zijn. Ik ben momenteel al
+bijna drie jaar werkzaam bij een bedrijf als designer en front-end developer.
+Voordat ik bij CMD kwam heb ik de studie Software Engineering gevolgd, ik weet
+dus het een en ander over programmeren!
+
+Vorig jaar heb ik mezelf voor het vak programmeren uitgedaagd om een hacking
+simulator te maken in HTML/CSS/JS. Door mezelf uit te dagen heb ik iets kunnen
+maken waar ik trots op ben, maar ook iets waar leraren en medestudenten onder
+de indruk van waren (het project werd genomineerd voor een Golden Dot Award!)
+
+Ik had enorm veel plezier in het bouwen van de website en het leren van nieuwe
+technieken, daarom ben ik van plan om voor dit vak met dezelfde houding te gaan
+starten! :D
 
 #### Je focus:
-hier je focus (kies uit responsive óf surface plane)
- 
+Mijn focus zal een combinatie worden van responsiviteit en extra aandacht voor
+de Surface laag. Voor de Surface laag waren een aantal onderwerpen waaruit ik
+kan kiezen. Uit deze onderwerpen heb ik er vijf gekozen:
+
+- Dark/Light mode
+- Werkend filteren/sorteren/zoeken
+- Meer micro-interacties
+- States van controls
+- Advanced positioning
+- En misschien meer!
+
 </details>
 
 
@@ -38,14 +52,14 @@ hier je focus (kies uit responsive óf surface plane)
 ### Je opdracht:
 link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
 
-#### Screenshot(s) van de eerste pagina (small screen): 
+#### Screenshot(s) van de eerste pagina (small screen):
 hier de naam van de pagina  
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
 <img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
+
 </details>
 
 
@@ -57,13 +71,13 @@ hier de naam van de pagina
 <details>
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
-### de hele pagina: 
+### de hele pagina:
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
 
-### dynamisch deel (bijv menu): 
+### dynamisch deel (bijv menu):
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
-### wellicht nog een dynamisch deel (bijv filter): 
+### wellicht nog een dynamisch deel (bijv filter):
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
@@ -152,19 +166,19 @@ Hier korte omschrijving (met indien nodig een afbeelding)
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 
-#### Titel tweede bevinding. 
+#### Titel tweede bevinding.
 Hier korte omschrijving (met indien nodig een afbeelding)
 
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 
-#### Titel volgende bevinding. 
+#### Titel volgende bevinding.
 Hier korte omschrijving (met indien nodig een afbeelding)
 
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 
-#### Titel nog een bevinding. 
+#### Titel nog een bevinding.
 Hier korte omschrijving (met indien nodig een afbeelding)
 
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
