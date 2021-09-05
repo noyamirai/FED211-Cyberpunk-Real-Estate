@@ -49,13 +49,19 @@ kan kiezen. Uit deze onderwerpen heb ik er vijf gekozen:
 ### Je opdracht:
 link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
 
-#### Screenshot(s) van de eerste pagina (small screen):
-hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+#### Design - Night City Living (Landing/Home):
+Zoals te zien in de onderstaande afbeelding is het ontwerp gemaakt voor desktop.
+De reden waarom ik dat voor nu heb gedaan is, omdat dit project een eigen voorstel
+is. Voordat ik de mobiele versie ga ontwerpen wil ik natuurlijk eerst weten of
+dit voorstel wordt geaccepteerd door de docent. Ik heb meer dan genoeg tijd en
+ervaring om design en programmeren te combineren met elkaar, dus geen zorgen
+over tijdstekort :D (werd vermeld in de algemene opdrachtbeschrijving van het
+  vak).
 
-#### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/design/cyberpunk-real_estate-design-landing.png" width="375px" alt="Night City Living Landing">
+
+#### Design - Night City Living (Listings):
+<img src="images/design/cyberpunk-real_estate-design-listings.png" width="375px" alt="Night City Living Listings">
 
 </details>
 
