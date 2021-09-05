@@ -20,7 +20,7 @@ Vorig jaar heb ik mezelf voor het vak programmeren uitgedaagd om een
 [hacking simulator](https://oege.ie.hva.nl/~ikizm001/kiroshisystem.io/ "Hacking Simulator 1.0")
 te maken in HTML/CSS/JS. Door mezelf uit te dagen heb ik iets kunnen
 maken waar ik trots op ben, maar ook iets waar leraren en medestudenten onder
-de indruk van waren (het project werd genomineerd voor een [Golden Dot Award](https://www.cmd-amsterdam.nl/portfolio/hacking-simulator-1-0/ "GDA Nominatie")
+de indruk van waren (het project werd genomineerd voor een [Golden Dot Award](https://www.cmd-amsterdam.nl/portfolio/hacking-simulator-1-0/ "GDA Nominatie"))
 
 Ik had enorm veel plezier in het bouwen van de website en het leren van nieuwe
 technieken, daarom ben ik van plan om voor dit vak met dezelfde houding te gaan
