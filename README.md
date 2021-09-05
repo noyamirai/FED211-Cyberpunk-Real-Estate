@@ -47,7 +47,7 @@ kan kiezen. Uit deze onderwerpen heb ik er vijf gekozen:
 <summary>Lees hier de debriefing van Night City Living</summary>
 
 ### Je opdracht:
-link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+DEBRIEFING TBA
 
 #### Design - Night City Living (Landing/Home):
 Zoals te zien in de onderstaande afbeelding is het ontwerp gemaakt voor desktop.
