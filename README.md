@@ -9,18 +9,18 @@ allemaal heb gedaan om uiteindelijk tot een toffe website te komen.
 <summary>Benieuwd naar wie ik ben? Klik hier!</summary>
 
 ### Auteur:
-Maijla Ikiz
-
+Maijla Ikiz [(portfolio)](https://oege.ie.hva.nl/~ikizm001/noyamirai.io/ "Maijla's Portfolio")
 #### Mijn startniveau:
 Voor dit vak zal mijn startniveau de Zwarte Piste zijn. Ik ben momenteel al
 bijna drie jaar werkzaam bij een bedrijf als designer en front-end developer.
 Voordat ik bij CMD kwam heb ik de studie Software Engineering gevolgd, ik weet
 dus het een en ander over programmeren!
 
-Vorig jaar heb ik mezelf voor het vak programmeren uitgedaagd om een hacking
-simulator te maken in HTML/CSS/JS. Door mezelf uit te dagen heb ik iets kunnen
+Vorig jaar heb ik mezelf voor het vak programmeren uitgedaagd om een
+[hacking simulator](https://oege.ie.hva.nl/~ikizm001/kiroshisystem.io/ "Hacking Simulator 1.0")
+te maken in HTML/CSS/JS. Door mezelf uit te dagen heb ik iets kunnen
 maken waar ik trots op ben, maar ook iets waar leraren en medestudenten onder
-de indruk van waren (het project werd genomineerd voor een Golden Dot Award!)
+de indruk van waren (het project werd genomineerd voor een [Golden Dot Award](https://www.cmd-amsterdam.nl/portfolio/hacking-simulator-1-0/ "GDA Nominatie")
 
 Ik had enorm veel plezier in het bouwen van de website en het leren van nieuwe
 technieken, daarom ben ik van plan om voor dit vak met dezelfde houding te gaan
