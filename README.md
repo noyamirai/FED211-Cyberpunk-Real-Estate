@@ -48,7 +48,17 @@ kan kiezen. Uit deze onderwerpen heb ik er vijf gekozen:
 <summary>Lees hier de debriefing van Night City Living</summary>
 
 ### Je opdracht:
-DEBRIEFING TBA
+Voor dit vak heb ik een eigen project/website bedacht, namelijk: Night City Living!
+Night City Living is een site waarmee gebruikers als het ware "beschikbare"
+huur- of koopwoningen uit de game Cyberpunk 2077 kunnen bekijken
+(het is niet mogelijk om woningen te kopen in de game zelf, maar dit is iets wat
+  ik zelf zou willen).
+
+Gedurende mijn propedeuse jaar heb ik twee andere opdrachten/projecten verzonnen
+die, net zoals dit project, geïnspireerd zijn door een spel genaamd Cyberpunk 2077:
+
+- [Hacking Simulator](https://oege.ie.hva.nl/~ikizm001/kiroshisystem.io/ "Hacking Simulator 1.0")
+- [Night City News](https://oege.ie.hva.nl/~ikizm001/nightcitynews.nl/")
 
 #### Design - Night City Living (Landing/Home):
 Zoals te zien in de onderstaande afbeelding is het ontwerp gemaakt voor desktop.
