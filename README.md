@@ -6,7 +6,7 @@ allemaal heb gedaan om uiteindelijk tot een toffe website te komen.
 ## Over mij
 
 <details open>
-<summary>Benieuwd naar wie ik ben? Klik hier!</summary>
+<summary>Lees hier meer over mij</summary>
 
 ### Auteur:
 Maijla Ikiz [(portfolio)](https://oege.ie.hva.nl/~ikizm001/noyamirai.io/ "Maijla's Portfolio")
