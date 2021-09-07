@@ -47,7 +47,7 @@ kan kiezen. Uit deze onderwerpen heb ik er vijf gekozen:
 <details open>
 <summary>Lees hier de debriefing van Night City Living</summary>
 
-### Je opdracht:
+### Opdrachtbeschrijving:
 Voor dit vak heb ik een eigen project/website bedacht, namelijk: Night City Living!
 Night City Living is een site waarmee gebruikers als het ware "beschikbare"
 huur- of koopwoningen uit de game Cyberpunk 2077 kunnen bekijken
