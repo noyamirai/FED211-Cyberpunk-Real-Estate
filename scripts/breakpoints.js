@@ -5,9 +5,9 @@ var htmlElement = document.querySelector("html");
 var breakpoints = [ // array of media queries
       window.matchMedia('(max-width: 480px)'),
       window.matchMedia('(min-width: 481px) and (max-width: 768px)'),
-      window.matchMedia('(min-width: 769px) and (max-width: 1024px)'),
-      window.matchMedia('(min-width: 1025px) and (max-width: 1200px)'),
-      window.matchMedia('(min-width: 1201px)')
+      window.matchMedia('(min-width: 769px) and (max-width: 1180px)'),
+      window.matchMedia('(min-width: 1181px) and (max-width: 1440px)'),
+      window.matchMedia('(min-width: 1441px)')
     ]
 
 for (var i = 0; i < breakpoints.length; i++) {
