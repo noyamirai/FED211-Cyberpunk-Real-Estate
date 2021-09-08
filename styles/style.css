@@ -13,8 +13,6 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 ============================================================================= */
 html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 *, *:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
-
-
 /* =============================================================================
   #GENERAL
 ============================================================================= */
@@ -33,22 +31,17 @@ html {
 }
 
 body {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 400;
   font-style: normal;
 
-  color: #1D1D1B;
-  font-size: 18px; font-size: 1.8rem;
+  color: #000000;
+  font-size: 16px; font-size: 1.6rem;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 
   background-color: #ffffff;
-}
-
-/* Container */
-.container {
-  padding: 0 100px;
 }
 
 img {
@@ -58,11 +51,18 @@ img {
 }
 
 /* =============================================================================
+  #CSS VARIABLES
+============================================================================= */
+
+:root {
+  --container-small-padding: 0 30px;
+}
+
+/* =============================================================================
   #TYPOGRAPHY
 ============================================================================= */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-
   line-height: 1.1;
 }
 
@@ -73,24 +73,38 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Heading 1 */
 h1 {
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 
-  font-size: 35px; font-size: 3.5rem;
+  font-weight: 800;
+  font-size: 50px; font-size: 5.0rem;
+
+  text-transform: uppercase;
+}
+
+html.small h1 {
+  margin-bottom: 12px;
+  font-size: 28px; font-size: 2.8rem;
 }
 
 /* Heading 2 */
 h2 {
-  margin-bottom: 12px;
-  font-size: 22px; font-size: 2.2rem;
+  font-weight: 500;
+  font-size: 32px; font-size: 3.2rem;
+}
+
+html.small h2 {
+  font-size: 24px; font-size: 2.4rem;
 }
 
 /* Heading 3 */
 h3 {
-  font-size: 18px; font-size: 1.8rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 28px; font-size: 2.8rem;
 }
 
 p {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 a {
@@ -121,20 +135,24 @@ ol {
 /* =============================================================================
   #NAVIGATION
 ============================================================================= */
-nav {
+/* nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   margin: 0px 100px 0px 100px;
 
-  /* background-color: #ffffff; */
-}
+  background-color: #ffffff;
+} */
 
 /* =============================================================================
   #BANNER
 ============================================================================= */
+header {
+  padding-top: 200px;
 
+  background-color: #DCE1E8;
+}
 
 /* =============================================================================
   #MAIN
