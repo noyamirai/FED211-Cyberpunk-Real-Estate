@@ -53,7 +53,6 @@ img {
 /* =============================================================================
   #CSS VARIABLES
 ============================================================================= */
-
 :root {
   --container-small-padding: 0 30px;
 }
@@ -293,10 +292,10 @@ header {
     }
 
   html.xlarge .header__content { margin: 0 18%; }
-  html.large .header__content, html.medium .header__content { margin: 0 5%; }
+  html.large .header__content { margin: 0 10%; }
+  html.medium .header__content { margin: 0 5%; }
   html.small .header__content { margin: 0 24px; padding-top: 150px;}
   html.xsmall .header__content { margin: 0 16px; padding-bottom: 108px; padding-top: 150px;}
-
 
   html.medium #property-selection,
   html.small #property-selection,
@@ -388,13 +387,12 @@ main {
 }
 
 html.medium main,
-html.small main {
-  padding-top: 100px;
-}
+html.small main { padding-top: 100px; }
 html.xsmall main { padding-top: 118px; }
 
 html.xlarge main { margin: 0 18%; }
-html.large main, html.medium main { margin: 0 5%; }
+html.large main { margin: 0 10%; }
+html.medium main { margin: 0 5%; }
 html.small main { margin: 0 24px; }
 html.xsmall main { margin: 0 16px; }
 
