@@ -1,16 +1,16 @@
 console.log("BREAKPOINT SCRIPT ACTIVE");
 
-var htmlElement = document.querySelector("html");
+let htmlElement = document.querySelector("html");
 
-var breakpoints = [ // array of media queries
+let breakpoints = [ // array of media queries
       window.matchMedia('(max-width: 480px)'),
       window.matchMedia('(min-width: 481px) and (max-width: 768px)'),
       window.matchMedia('(min-width: 769px) and (max-width: 1180px)'),
       window.matchMedia('(min-width: 1181px) and (max-width: 1440px)'),
       window.matchMedia('(min-width: 1441px)')
-    ]
+    ];
 
-for (var i = 0; i < breakpoints.length; i++) {
+for (let i = 0; i < breakpoints.length; i++) {
   breakpoints[i].addListener(WidthChange);
   WidthChange(breakpoints[i]);
 }

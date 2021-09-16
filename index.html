@@ -18,10 +18,11 @@
 
 <body>
 	<header>
-		<div class="header__content">
+		<section class="header__content">
 			<h1>Find your home in Night City</h1>
 			<h2>The city of dreams &mdash; The city of legends </h2>
 
+			<!-- Search bar -->
 			<form action="index.html" method="post">
 				<div class="form__section" id="district-selection">
 					<label class="form__label form__label-small" for="district">District</label>
@@ -54,18 +55,20 @@
 				<button class="btn" type="button" name="button">Search</button>
 
 			</form>
-		</div>
+		</section>
 
+		<!-- BRON: nightcity.love -->
 		<!-- <img class="edges edges-small" src="./images/rough-edges-2-small.png" alt="Rough Edges"> -->
 		<!-- <img class="edges" src="./images/rough-edges-2.png" alt="Rough Edges"> -->
 	</header>
 
 	<main>
 		<section class="about-night-city">
-			<div>
+			<picture>
 				<img src="./images/logos/night-city-hall-logo.svg" alt="">
-			</div>
+			</picture>
 
+			<!-- Container for grouping -->
 			<div>
 				<h3>Why should you buy your new home in Night City?</h3>
 				<ul>
@@ -73,7 +76,7 @@
 						<figure class="icon">
 							<img src="./images/icons/free-icon.svg" alt="">
 						</figure>
-
+						<!-- give better class names -->
 						<div class="content">
 							<h5>Part of the Free States</h5>
 							<p>Night City is a free city-state and is not under the jurisdiction of the NUSA government</p>
@@ -111,7 +114,76 @@
 					</li>
 				</ul>
 			</div>
+		</section>
 
+		<section class="card-section">
+			<div class="title-container">
+				<h3>Best Property Deals</h3>
+				<a href="#">View all properties</a>
+			</div>
+
+			<ul class="cards">
+				<li>
+					<figure>
+						<div class="card-section__price-container">
+							<img src="./images/dummy-building.png" alt="">
+							<p>€$1500<span>/ Month</span></p>
+						</div>
+						<figcaption>
+							<h5>Family Home 1</h5>
+							<p>Rancho Coronado, Santo Domingo</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div class="card-section__price-container">
+							<img src="./images/dummy-building.png" alt="">
+							<p>€$1500<span>/ Month</span></p>
+						</div>
+						<figcaption>
+							<h5>Family Home2</h5>
+							<p>Rancho Coronado, Santo Domingo</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div class="card-section__price-container">
+							<img src="./images/dummy-building.png" alt="">
+							<p>€$1500<span>/ Month</span></p>
+						</div>
+						<figcaption>
+							<h5>Family Home3</h5>
+							<p>Rancho Coronado, Santo Domingo</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div class="card-section__price-container">
+							<img src="./images/dummy-building.png" alt="">
+							<p>€$1500<span>/ Month</span></p>
+						</div>
+						<figcaption>
+							<h5>Family Home</h5>
+							<p>Rancho Coronado, Santo Domingo</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<div class="card-section__price-container">
+							<img src="./images/dummy-building.png" alt="">
+							<p>€$1500<span>/ Month</span></p>
+						</div>
+						<figcaption>
+							<h5>Family Home</h5>
+							<p>Rancho Coronado, Santo Domingo</p>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
 		</section>
 	</main>
 
