@@ -144,7 +144,9 @@ ol {
 /* =============================================================================
   #FORM
 ============================================================================= */
-.form__section { position: relative; }
+.form__section {
+   position: relative;
+ }
 
 .form__section::before {
   content: "";
@@ -642,10 +644,12 @@ html.small .about-night-city {
       }
 
         .card-section figure {
+          position: relative;
+          text-align: right;
         }
 
           .card-section__price-container {
-            position: relative;
+            display: block;
             background-color: #D8DDE6;
             border-radius: 6px;
           }
@@ -657,12 +661,8 @@ html.small .about-night-city {
               object-fit: cover;
             }
 
-            .card-section__price-container p {
-              position: absolute;
-              bottom: 16px;
-              right: 16px;
-
-              display: flex;
+            .card-section__price-container + p {
+              display: inline-flex;
               align-items: center;
 
               background-color: #FFFFFF;
@@ -673,6 +673,10 @@ html.small .about-night-city {
               font-size: 17px; font-size: 1.7rem;
               color: #346CCF;
               font-weight: 700;
+
+              transform: translateY(calc(-100% - 16px));
+              position: absolute;
+              right: 16px;
             }
 
             html.small .card-section__price-container p {
@@ -703,6 +707,7 @@ html.small .about-night-city {
 
           .card-section figure > figcaption {
             margin-top: 16px;
+            text-align: left;
           }
 
             .card-section figure > figcaption h5 {
