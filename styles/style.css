@@ -385,7 +385,7 @@ header {
 ============================================================================= */
 main {
   padding-top: 130px;
-  padding-bottom: 130px;
+  padding-bottom: 80px;
 }
 
 html.medium main,
@@ -614,6 +614,18 @@ html.small .about-night-city {
         padding: 16px;
       }
 
+      .card-section .cards li a {
+        display: block;
+
+        color: #8C929C;
+
+        transition: all 300ms ease-in-out;
+      }
+
+      .card-section .cards li a:hover {
+        transform: scale(1.02);
+      }
+
       html.xsmall .card-section .cards li {
         flex-basis: 100%;
       }
@@ -758,3 +770,72 @@ html.small .btn {
 /* =============================================================================
   #FOOTER
 ============================================================================= */
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+
+  text-align: center;
+
+  background-color: #346CCF;
+}
+
+  footer h3 {
+    color: #FFF;
+    margin-bottom: 40px;
+  }
+
+  footer > picture {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 30px 60px 30px;
+  }
+
+  @media only screen and (max-width: 530px) {
+    footer > picture {
+      flex-direction: column;
+    }
+
+    footer > picture img + img {
+      margin-top: 60px;
+    }
+  }
+
+  html.medium footer > picture {
+    width: 85%;
+  }
+
+  html.small footer > picture {
+    width: 100%;
+  }
+
+    footer > picture img {
+      height: 90px;
+      width: auto;
+    }
+
+    html.small footer > picture img {
+      height: 80px;
+      width: auto;
+    }
+
+    footer > picture img + img {
+      margin-left: 150px;
+    }
+
+    html.medium footer > picture img + img,
+    html.small footer > picture img + img {
+      margin-left: 0;
+    }
+
+
+  footer > section {
+    background-color: #FFF;
+    padding: 30px 0;
+    text-align: center;
+    width: 100%;
+  }
