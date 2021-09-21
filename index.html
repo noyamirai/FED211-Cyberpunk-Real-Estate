@@ -24,6 +24,15 @@
 
 			<!-- Search bar -->
 			<form action="index.html" method="post">
+				<div id="toggle-container" class="toggle">
+					<div id="toggle-sale" class="toggle__option toggle__option--active">
+						<p>For sale</p>
+					</div>
+					<div id="toggle-rent" class="toggle__option">
+						<p>Rent</p>
+					</div>
+				</div>
+
 				<fieldset class="form__section" id="district-selection">
 					<label class="form__label form__label-small" for="district">District</label>
 					<select id="district" name="district">
@@ -213,8 +222,6 @@
 						</figure>
 					</a>
 				</li>
-
-
 			</ul>
 		</section>
 	</main>
@@ -232,6 +239,7 @@
 	</footer>
 
 	<script src="scripts/breakpoints.js"></script>
+	<script src="scripts/togglescript.js"></script>
 </body>
 
 </html>

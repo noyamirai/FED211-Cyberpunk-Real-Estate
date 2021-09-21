@@ -144,6 +144,81 @@ ol {
 /* =============================================================================
   #FORM
 ============================================================================= */
+form {
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  transform: translate(-2px, calc(-100% - 2px));
+
+  background-color: transparent;
+}
+
+  .toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+
+    transform: translateX(0);
+
+    height: 100%;
+    width: 50%;
+
+    background-color: #346CCF;
+    border-top-left-radius: 6px;
+
+    transition: .3s cubic-bezier(0,0,0,1);
+  }
+
+  .toggled::before {
+    transform: translateX(100%);
+    border-top-right-radius: 6px;
+    border-top-left-radius: 0px;
+
+  }
+
+  html.xsmall .toggle {
+    display: none;
+    opacity: 0;
+  }
+
+  .toggle__option {
+    display: flex;
+    justify-content: center;
+
+    padding: 16px 35px;
+    min-width: 125px;
+
+    font-weight: 600;
+    color: #BAC2CF;
+
+    background-color: #FFF;
+
+    cursor: pointer;
+    transition: color 50ms ease-in-out;
+  }
+
+    .toggle__option p {
+      position: relative;
+    }
+
+  .toggle__option:first-of-type {
+    border-top-left-radius: 6px;
+  }
+  .toggle__option:last-of-type {
+    border-top-right-radius: 6px;
+  }
+
+    .toggle__option--active {
+      /* background-color: #346CCF; */
+      color: #FFF;
+    }
+
 .form__section {
    position: relative;
  }
@@ -284,7 +359,7 @@ header {
   }
 
   .header__content {
-    padding: 200px 0 70px 0px;
+    padding: 200px 0 120px 0px;
     position: relative;
     z-index: 10;
   }
@@ -330,6 +405,7 @@ header {
     html.xsmall .header__content form {
       bottom: -78px;
       flex-direction: column!important;
+      border-top-left-radius: 6px;
     }
 
       .header__content form .form__section {
