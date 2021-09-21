@@ -60,7 +60,7 @@ img {
 /* =============================================================================
   #TYPOGRAPHY
 ============================================================================= */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, legend {
   margin-top: 0;
   line-height: 1.1;
   color: #000;
@@ -105,7 +105,7 @@ html.small h3 {
   font-size: 22px; font-size: 2.2rem;
 }
 
-h5 {
+h5, legend {
   font-size: 18px; font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 6px;
@@ -215,44 +215,111 @@ form {
   }
 
     .toggle__option--active {
-      /* background-color: #346CCF; */
       color: #FFF;
     }
 
-.form__section {
-   position: relative;
- }
+  .form__section {
+    display: block;
+  }
 
-.form__section::before {
-  content: "";
-  position: absolute;
+  .form__section + .form__section {
+    margin-top: 24px;
+    padding-top: 24px;
 
-  right: -24px;
-  top: 0;
-  bottom: 0;
+    border-top: 2px solid #DCE1E8;
+  }
 
-  width: 2px;
-  height: 100%;
+    .form__section--radio {
+    }
 
-  background: #DCE1E8;
-  border-radius: 6px;
-}
+    .form__section--radio label {
+      display: block;
+      position: relative;
+      padding-left: 30px;
 
-.form__section:last-of-type::before {
-  display: none;
-}
+      cursor: pointer;
 
-html.small .form__section::before {
-  display: none;
-}
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
 
-  .form__label {
+    .form__section--radio label + label {
+      margin-top: 8px;
+    }
+
+    .form__section--radio input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    /* BRON: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio */
+    /* Create a custom radio button */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 20px;
+      width: 20px;
+
+      background-color: #FFF;
+      border: 2px solid #DCE1E8;
+      border-radius: 50%;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .form__section--radio label:hover input ~ .checkmark {
+      border-color: #346ccf;
+    }
+
+    /* When the radio button is checked, add a blue background */
+    .form__section--radio label input:checked ~ .checkmark {
+      background-color: #346ccf;
+      border-color: #346ccf;
+    }
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    /* Show the indicator (dot/circle) when checked */
+    .form__section--radio label input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the indicator (dot/circle) */
+    .form__section--radio label .checkmark:after {
+      left: 5px;
+      top: 1px;
+
+      width: 6px;
+      height: 10px;
+
+      border: solid white;
+      border-width: 0 2px 2px 0;
+
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+  /* section label */
+  .form__label, legend {
     display: block;
 
     margin-bottom: 12px;
-
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px; font-size: 1.8rem;
+  }
+
+  .home .form__label {
+    font-weight: 600;
   }
 
   .form__label-small {
@@ -260,6 +327,11 @@ html.small .form__section::before {
 
     font-size: 13px; font-size: 1.3rem;
     color: #BAC2CF;
+  }
+
+  label {
+    font-size: 16px; font-size: 1.6rem;
+    font-weight: 600;
   }
 
   select {
@@ -310,7 +382,7 @@ html.small .form__section::before {
 /* =============================================================================
   #BANNER
 ============================================================================= */
-header {
+.home header {
   position: relative;
 
   background-image: url('../images/building-shot.jpeg');
@@ -321,8 +393,18 @@ header {
   background-color: #DCE1E8;
 }
 
+.results header {
+  position: relative;
+
+  width: 100%;
+
+  height: 80px;
+
+  border-bottom: 2px solid #DCE1E8;
+}
+
   /* Gradient overlay */
-  header::before {
+  .home header::before {
     content: "";
     position: absolute;
 
@@ -342,7 +424,7 @@ header {
   }
 
   /* Gradient overlay */
-  header::after {
+  .home header::after {
     content: "";
     position: absolute;
 
@@ -368,22 +450,26 @@ header {
       color: #FFFFFF;
     }
 
-  html.xlarge .header__content { margin: 0 18%; }
-  html.large .header__content { margin: 0 10%; }
-  html.medium .header__content { margin: 0 5%; }
+  html.xlarge .header__content,
+  html.xlarge .results .searchbar { margin: 0 18%; }
+  html.large .header__content,
+  html.large .results .searchbar { margin: 0 10%; }
+  html.medium .header__content,
+  html.medium .results .searchbar { margin: 0 5%; }
   html.small .header__content { margin: 0 24px; padding-top: 150px;}
+  html.small .results .searchbar { margin: 0 24px; }
   html.xsmall .header__content { margin: 0 16px; padding-bottom: 108px; padding-top: 150px;}
+  html.small .results .searchbar { margin: 0 16px;}
 
   html.medium #property-selection,
   html.small #property-selection,
   html.small #price-selection  { display: none; }
 
-    .header__content form {
+    .searchbar {
       position: absolute;
       left: 0;
       right: 0;
       bottom: -50px;
-
 
       display: flex;
       align-items: center;
@@ -402,30 +488,57 @@ header {
       z-index: 10;
     }
 
-    html.xsmall .header__content form {
+    .results .searchbar {
+      border-radius: 6px 6px 6px 6px;
+    }
+
+    html.xsmall .searchbar {
       bottom: -78px;
       flex-direction: column!important;
       border-top-left-radius: 6px;
     }
 
-      .header__content form .form__section {
+      .searchbar .form__section {
         position: relative;
         width: 100%;
       }
 
-      .header__content form .form__section + .form__section {
+      .searchbar .form__section::before {
+        content: "";
+        position: absolute;
+
+        right: -24px;
+        top: 0;
+        bottom: 0;
+
+        width: 2px;
+        height: 100%;
+
+        background: #DCE1E8;
+        border-radius: 6px;
+      }
+
+      .searchbar .form__section:last-of-type::before {
+        display: none;
+      }
+
+      html.small .searchbar .form__section::before {
+        display: none;
+      }
+
+      .searchbar .form__section + .form__section {
         padding-left: 50px;
       }
 
-      .header__content form > .btn { margin-left: 20px; }
-
-      html.medium .header__content form > .btn,
-      html.small .header__content form > .btn {
+      .searchbar > .btn { margin-left: 20px; }
+      .results .searchbar > .btn { font-size: 16px; font-size: 1.6rem!important; }
+      html.medium .searchbar > .btn,
+      html.small .searchbar > .btn {
         width: auto;
         font-size: 18px; font-size: 1.8rem;
       }
 
-      html.xsmall .header__content form > .btn {
+      html.xsmall .searchbar > .btn {
         width: 100%;
         margin-left: 0;
         margin-top: 20px;
@@ -456,6 +569,109 @@ header {
     display: block;
     opacity: 1;
   }
+/* =============================================================================
+  #FILTER MENU
+============================================================================= */
+.filters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 30px;
+
+  width: 80%;
+
+  transform: translateX(-100%);
+
+  border-right: 2px solid #DCE1E8;
+  background-color: #FFF;
+  transition: transform .3s ease-in-out;
+}
+
+.filters.open {
+  transform: translateX(0%);
+}
+
+  .filters__menu-btn {
+    position: absolute;
+
+    top: 50%;
+    right: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    background-color: #346CCF;
+  }
+
+    /* BRON: https://codepen.io/designcouch/pen/Atyop*/
+    .filters__menu-btn span {
+      display: block;
+
+      height: 3px;
+      width: 24px;
+
+      background: #FFF;
+      border-radius: 9px;
+
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+
+      -webkit-transform-origin: center;
+      -moz-transform-origin: center;
+      -o-transform-origin: center;
+      transform-origin: center;
+    }
+
+    .filters__menu-btn span + span {
+      margin-top: 5px;
+    }
+
+    .open #bar-1 {
+      transform: rotate(-45deg) translate(-6px, 5px);
+    }
+
+    .open #bar-2 { opacity: 0;}
+
+    .open #bar-3 {
+      transform: rotate(45deg) translate(-6px, -5px);
+    }
+
+    .filters__title {
+      align-items: flex-start!important;
+      flex-direction: row!important;
+    }
+
+      .filters__title a {
+        margin: 0!important;
+      }
+
+      .filters__title > div > h3 {
+        margin-bottom: 6px;
+      }
+
 /* =============================================================================
   #MAIN
 ============================================================================= */
@@ -825,6 +1041,7 @@ html.small .about-night-city {
   min-width: 120px;
 
   color: #FFFFFF;
+  text-align: center;
   font-weight: 700;
   font-size: 18px; font-size: 1.8rem;
 
@@ -834,6 +1051,7 @@ html.small .about-night-city {
   outline: none;
   border: none;
   box-shadow: none;
+  cursor: pointer;
 }
 
 html.small .btn {
