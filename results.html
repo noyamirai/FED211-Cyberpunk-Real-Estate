@@ -17,212 +17,254 @@
 </head>
 
 <body class="results">
-	<header>
-
-		<div id="filter-menu-btn" class="filters__menu-btn">
-			<span id="bar-1"></span>
-			<span id="bar-2"></span>
-			<span id="bar-3"></span>
-		</div>
+	<main>
 
 		<section class="filters">
-			<div class="filters__title title-container">
-				<div>
-					<h3>Filters</h3>
-					<p>4 applied</p>
+			<header>
+				<!-- <div id="filter-menu-btn" class="filters__menu-btn">
+					<span id="bar-1"></span>
+					<span id="bar-2"></span>
+					<span id="bar-3"></span>
+				</div> -->
+			</header>
+
+			<section class="filters-container">
+				<div class="filters__title title-container">
+					<div>
+						<h3>Filters</h3>
+						<p>4 applied</p>
+					</div>
+					<a href="#">Reset</a>
 				</div>
-				<a href="#">Reset</a>
-			</div>
 
-			<form action="#" method="post">
+				<form action="#" method="post">
 
-				<fieldset class="form__section form__section--radio">
-					<h5 class="form__label">Property type</h5>
+					<fieldset class="form__section form__section--radio">
+						<h5 class="form__label">Property type</h5>
 
-					<label>One
-					  <input type="radio" checked="checked" name="radio">
-					  <span class="checkmark"></span>
-					</label>
+						<label>One
+							<input type="radio" checked="checked" name="radio">
+							<span class="checkmark"></span>
+						</label>
 
-					<label>Two
-					  <input type="radio" name="radio">
-					  <span class="checkmark"></span>
-					</label>
+						<label>Two
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
 
-					<label>Three
-					  <input type="radio" name="radio">
-					  <span class="checkmark"></span>
-					</label>
+						<label>Three
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
 
-					<label>Four
-					  <input type="radio" name="radio">
-					  <span class="checkmark"></span>
-					</label>
+						<label>Four
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
 
-				</fieldset>
-				<fieldset class="form__section form__section--radio">
-					<h5 class="form__label">Property type</h5>
+					</fieldset>
+					<fieldset class="form__section form__section--radio">
+						<h5 class="form__label">Property type</h5>
 
-					<label>One
-					  <input type="radio" checked="checked" name="radio">
-					  <span class="checkmark"></span>
-					</label>
+						<label>One
+							<input type="radio" checked="checked" name="radio">
+							<span class="checkmark"></span>
+						</label>
 
-					<label>Two
-					  <input type="radio" name="radio">
-					  <span class="checkmark"></span>
-					</label>
+						<label>Two
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
 
-					<label>Three
-					  <input type="radio" name="radio">
-					  <span class="checkmark"></span>
-					</label>
+						<label>Three
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
 
-					<label>Four
-					  <input type="radio" name="radio">
-					  <span class="checkmark"></span>
-					</label>
+						<label>Four
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
 
-				</fieldset>
-			</form>
+					</fieldset>
+				</form>
+			</section>
 
 
 		</section>
 
-		<!-- Search bar -->
-		<!-- <form class"searchbar" action="index.html" method="post">
+		<section class="card-section-wrapper">
+			<header>
+				<div id="filter-menu-btn" class="filters__menu-btn">
+					<span id="bar-1"></span>
+					<span id="bar-2"></span>
+					<span id="bar-3"></span>
+				</div>
+				
+				<!-- Search bar -->
+				<form class="searchbar" action="index.html" method="post">
+					<fieldset class="form__section" id="district-selection">
+						<select id="district" name="district">
+							<option value="volvo">Santo Domingo</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+					</fieldset>
+					<fieldset class="form__section" id="property-selection">
+						<select id="property-type" name="property-type">
+							<option value="volvo">Apartment (High Rise)</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+					</fieldset>
+					<fieldset class="form__section" id="price-selection">
+						<select id="property-type" name="property-type">
+							<option value="volvo">$15.000 - $25.000</option>
+							<option value="saab">Saab</option>
+							<option value="fiat">Fiat</option>
+							<option value="audi">Audi</option>
+						</select>
+					</fieldset>
 
-			<fieldset class="form__section" id="district-selection">
-				<select id="district" name="district">
-					<option value="volvo">Santo Domingo</option>
-					<option value="saab">Saab</option>
-					<option value="fiat">Fiat</option>
-					<option value="audi">Audi</option>
-				</select>
-			</fieldset>
-			<fieldset class="form__section" id="property-selection">
-				<select id="property-type" name="property-type">
-					<option value="volvo">Apartment (High Rise)</option>
-					<option value="saab">Saab</option>
-					<option value="fiat">Fiat</option>
-					<option value="audi">Audi</option>
-				</select>
-			</fieldset>
-			<fieldset class="form__section" id="price-selection">
-				<select id="property-type" name="property-type">
-					<option value="volvo">$15.000 - $25.000</option>
-					<option value="saab">Saab</option>
-					<option value="fiat">Fiat</option>
-					<option value="audi">Audi</option>
-				</select>
-			</fieldset>
+					<a href="results.html" class="btn">Search</a>
+					<!-- <button class="btn" type="button" name="button">Search</button> -->
 
-			<button class="btn" type="button" name="button">Search</button>
-		</form> -->
+				</form>
+			</header>
 
-	</header>
+			<div class="card-section">
+				<div class="title-container">
+					<h3>Best Property Deals</h3>
+				</div>
 
-	<main>
+				<ul class="cards">
+					<li>
+						<a href="#">
+							<figure>
+								<picture class="card-section__price-container">
+									<img src="./images/dummy-building.png" alt="">
+								</picture>
+								<p>€$1500<span>/ Month</span></p>
 
-		<!-- <section class="card-section">
-			<div class="title-container">
-				<h3>Best Property Deals</h3>
-				<a href="#">View all properties</a>
+								<figcaption>
+									<h5>Family Home 1</h5>
+									<p>Rancho Coronado, Santo Domingo</p>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<picture class="card-section__price-container">
+									<img src="./images/dummy-building.png" alt="">
+								</picture>
+								<p>€$1500<span>/ Month</span></p>
+
+								<figcaption>
+									<h5>Family Home 1</h5>
+									<p>Rancho Coronado, Santo Domingo</p>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<picture class="card-section__price-container">
+									<img src="./images/dummy-building.png" alt="">
+								</picture>
+								<p>€$1500<span>/ Month</span></p>
+
+								<figcaption>
+									<h5>Family Home 1</h5>
+									<p>Rancho Coronado, Santo Domingo</p>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<picture class="card-section__price-container">
+									<img src="./images/dummy-building.png" alt="">
+								</picture>
+								<p>€$1500<span>/ Month</span></p>
+
+								<figcaption>
+									<h5>Family Home 1</h5>
+									<p>Rancho Coronado, Santo Domingo</p>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<picture class="card-section__price-container">
+									<img src="./images/dummy-building.png" alt="">
+								</picture>
+								<p>€$1500<span>/ Month</span></p>
+
+								<figcaption>
+									<h5>Family Home 1</h5>
+									<p>Rancho Coronado, Santo Domingo</p>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<picture class="card-section__price-container">
+									<img src="./images/dummy-building.png" alt="">
+								</picture>
+								<p>€$1500<span>/ Month</span></p>
+
+								<figcaption>
+									<h5>Family Home 1</h5>
+									<p>Rancho Coronado, Santo Domingo</p>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<picture class="card-section__price-container">
+									<img src="./images/dummy-building.png" alt="">
+								</picture>
+								<p>€$1500<span>/ Month</span></p>
+
+								<figcaption>
+									<h5>Family Home 1</h5>
+									<p>Rancho Coronado, Santo Domingo</p>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<picture class="card-section__price-container">
+									<img src="./images/dummy-building.png" alt="">
+								</picture>
+								<p>€$1500<span>/ Month</span></p>
+
+								<figcaption>
+									<h5>Family Home 1</h5>
+									<p>Rancho Coronado, Santo Domingo</p>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+				</ul>
 			</div>
 
-			<ul class="cards">
-				<li>
-					<a href="#">
-						<figure>
-							<picture class="card-section__price-container">
-								<img src="./images/dummy-building.png" alt="">
-							</picture>
-							<p>€$1500<span>/ Month</span></p>
+		</section>
 
-							<figcaption>
-								<h5>Family Home 1</h5>
-								<p>Rancho Coronado, Santo Domingo</p>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<figure>
-							<picture class="card-section__price-container">
-								<img src="./images/dummy-building.png" alt="">
-							</picture>
-							<p>€$1500<span>/ Month</span></p>
-
-							<figcaption>
-								<h5>Family Home 1</h5>
-								<p>Rancho Coronado, Santo Domingo</p>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<figure>
-							<picture class="card-section__price-container">
-								<img src="./images/dummy-building.png" alt="">
-							</picture>
-							<p>€$1500<span>/ Month</span></p>
-
-							<figcaption>
-								<h5>Family Home 1</h5>
-								<p>Rancho Coronado, Santo Domingo</p>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<figure>
-							<picture class="card-section__price-container">
-								<img src="./images/dummy-building.png" alt="">
-							</picture>
-							<p>€$1500<span>/ Month</span></p>
-
-							<figcaption>
-								<h5>Family Home 1</h5>
-								<p>Rancho Coronado, Santo Domingo</p>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<figure>
-							<picture class="card-section__price-container">
-								<img src="./images/dummy-building.png" alt="">
-							</picture>
-							<p>€$1500<span>/ Month</span></p>
-
-							<figcaption>
-								<h5>Family Home 1</h5>
-								<p>Rancho Coronado, Santo Domingo</p>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<figure>
-							<picture class="card-section__price-container">
-								<img src="./images/dummy-building.png" alt="">
-							</picture>
-							<p>€$1500<span>/ Month</span></p>
-
-							<figcaption>
-								<h5>Family Home 1</h5>
-								<p>Rancho Coronado, Santo Domingo</p>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-			</ul>
-		</section> -->
 	</main>
 
 

@@ -359,6 +359,10 @@ form {
     background-position-y: 5px;
   }
 
+  .results select {
+    font-size: 16px; font-size: 1.6rem;
+  }
+
   select::-ms-expand { display: none; }
 
   html.medium select,
@@ -393,16 +397,6 @@ form {
   background-color: #DCE1E8;
 }
 
-.results header {
-  position: relative;
-
-  width: 100%;
-
-  height: 80px;
-
-  border-bottom: 2px solid #DCE1E8;
-}
-
   /* Gradient overlay */
   .home header::before {
     content: "";
@@ -418,9 +412,6 @@ form {
 
     background: rgb(0,107,218);
     background: linear-gradient(180deg, rgba(0,107,218,1) -120%, rgba(0,107,218,0) 70%);
-
-    /* background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,1) 100%); */
   }
 
   /* Gradient overlay */
@@ -450,16 +441,11 @@ form {
       color: #FFFFFF;
     }
 
-  html.xlarge .header__content,
-  html.xlarge .results .searchbar { margin: 0 18%; }
-  html.large .header__content,
-  html.large .results .searchbar { margin: 0 10%; }
-  html.medium .header__content,
-  html.medium .results .searchbar { margin: 0 5%; }
+  html.xlarge .header__content { margin: 0 18%; }
+  html.large .header__content { margin: 0 10%; }
+  html.medium .header__content { margin: 0 5%; }
   html.small .header__content { margin: 0 24px; padding-top: 150px;}
-  html.small .results .searchbar { margin: 0 24px; }
   html.xsmall .header__content { margin: 0 16px; padding-bottom: 108px; padding-top: 150px;}
-  html.small .results .searchbar { margin: 0 16px;}
 
   html.medium #property-selection,
   html.small #property-selection,
@@ -489,7 +475,49 @@ form {
     }
 
     .results .searchbar {
+      left: 30px;
+      right: 30px;
+      bottom: -37px;
+
+      padding: 12px;
+
       border-radius: 6px 6px 6px 6px;
+    }
+
+    html.small .results .searchbar {
+      display: none;
+      opacity: 0;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .results #property-selection {
+        display: block;
+      }
+    }
+
+    @media only screen and (max-width: 1150px) {
+      .results .searchbar {
+
+        position: relative;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        top: auto;
+      }
+
+      .card-section-wrapper header {
+        height: auto!important;
+        padding: 12px 105px 12px 30px;
+      }
+    }
+
+    html.small .results .searchbar {
+      display: none;
+      opacity: 0;
+    }
+
+    html.small .card-section-wrapper header {
+      height: 80px!important;
     }
 
     html.xsmall .searchbar {
@@ -518,6 +546,10 @@ form {
         border-radius: 6px;
       }
 
+      .results .searchbar .form__section::before {
+        right: -15px;
+      }
+
       .searchbar .form__section:last-of-type::before {
         display: none;
       }
@@ -528,6 +560,13 @@ form {
 
       .searchbar .form__section + .form__section {
         padding-left: 50px;
+        padding-top: 0;
+        margin: 0;
+        border: none;
+      }
+
+      .results .searchbar .form__section + .form__section {
+        padding-left: 30px;
       }
 
       .searchbar > .btn { margin-left: 20px; }
@@ -577,15 +616,46 @@ form {
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 30px;
 
-  width: 80%;
+  /* width: 40%; */
+  width: 100%;
 
   transform: translateX(-100%);
 
-  border-right: 2px solid #DCE1E8;
   background-color: #FFF;
-  transition: transform .3s ease-in-out;
+  transition: transform .5s ease-in-out;
+
+  z-index: 100;
+}
+
+@media only screen and (min-width: 1150px) {
+  .filters {
+    position: static;
+    transform: translateX(0);
+    width: 25%!important;
+  }
+
+  .filters-container {
+    padding: 60px 30px 30px 30px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .filters {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .filters {
+    width: 40%;
+  }
+}
+
+.filters-container {
+  padding: 30px;
+  height: calc(100% - 60px);
+  border-right: 2px solid #DCE1E8;
 }
 
 .filters.open {
@@ -593,12 +663,14 @@ form {
 }
 
   .filters__menu-btn {
+    display: flex;
+    opacity: 1;
+
     position: absolute;
 
     top: 50%;
-    right: 26px;
+    right: 30px;
 
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -617,6 +689,14 @@ form {
     cursor: pointer;
 
     background-color: #346CCF;
+    z-index: 150;
+  }
+
+  @media only screen and (min-width: 1150px) {
+    .filters__menu-btn {
+      display: none;
+      opacity: 0;
+    }
   }
 
     /* BRON: https://codepen.io/designcouch/pen/Atyop*/
@@ -680,18 +760,27 @@ main {
   padding-bottom: 80px;
 }
 
+.results main {
+  display: flex;
+  padding: 0!important;
+}
+
 html.medium main,
 html.small main { padding-top: 100px; }
 html.xsmall main { padding-top: 118px; }
 
-html.xlarge main { margin: 0 18%; }
-html.large main { margin: 0 10%; }
-html.medium main { margin: 0 5%; }
-html.small main { margin: 0 24px; }
-html.xsmall main { margin: 0 16px; }
+html.xlarge .home main { margin: 0 18%; }
+html.large .home main { margin: 0 10%; }
+html.medium .home main { margin: 0 5%; }
+html.small .home main { margin: 0 24px; }
+html.xsmall .home main { margin: 0 16px; }
 
 section + section {
   margin-top: 80px;
+}
+
+.results section + section {
+  margin-top: 0!important;
 }
 
 html.small section + section {
@@ -888,8 +977,37 @@ html.small .about-night-city {
         margin-left: 24px;
       }
 
-  .card-section {
+  .card-section-wrapper {
+    width: 100%;
+  }
 
+    .card-section-wrapper header,
+    .filters header {
+      position: relative;
+
+      height: 80px;
+      width: 100%;
+
+      border-bottom: 2px solid #DCE1E8;
+    }
+
+  .results .card-section {
+    padding: 30px;
+  }
+
+  @media only screen and (min-width: 1150px) {
+    .card-section-wrapper {
+      width: 75%!important;
+    }
+
+    .results .card-section {
+      padding: 60px 30px 30px 30px;
+    }
+
+    .card-section-wrapper header,
+    .filters header {
+      height: 60px;
+    }
   }
 
     .card-section .cards {
@@ -1045,7 +1163,7 @@ html.small .about-night-city {
   font-weight: 700;
   font-size: 18px; font-size: 1.8rem;
 
-  background: #167dc5;
+  background-color: #346CCF;
   border-radius: 6px;
 
   outline: none;
