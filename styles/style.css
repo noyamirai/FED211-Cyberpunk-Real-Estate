@@ -1019,12 +1019,12 @@ html.small .about-night-city {
         flex-basis: 100%;
       }
 
-      html.medium .card-section .cards li:nth-of-type(n+5),
-      html.small .card-section .cards li:nth-of-type(n+5) {
+      html.medium .home .card-section .cards li:nth-of-type(n+5),
+      html.small .home .card-section .cards li:nth-of-type(n+5) {
         display: none;
       }
 
-      html.xsmall .card-section .cards li:nth-of-type(n+4) {
+      html.xsmall .home .card-section .cards li:nth-of-type(n+4) {
         display: none;
       }
 
@@ -1039,7 +1039,7 @@ html.small .about-night-city {
           flex-basis: 100%!important;
         }
 
-        .card-section .cards li:nth-of-type(n+4) {
+        .home .card-section .cards li:nth-of-type(n+4) {
           display: none;
         }
       }
