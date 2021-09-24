@@ -1,13 +1,9 @@
 console.log("FILTER SCRIPT ACTIVE");
 
-const filterMenuBtn = document.querySelector("#filter-menu-btn");
-const filterMenu = document.querySelector(".filters");
-const cardSection = document.querySelector(".card-section");
+const hamburgerMenu = document.querySelector("#hamburger-menu");
+const filterMenu = document.querySelector("#filter-section");
 
-filterMenuBtn.addEventListener("click", () => {
-    console.log('filter menu icon clicked');
-
+hamburgerMenu.addEventListener("click", () => {
+    hamburgerMenu.classList.toggle("open");
     filterMenu.classList.toggle("open");
-    filterMenuBtn.classList.toggle("open");
-    // cardSection.classList.toggle("hide");
 })

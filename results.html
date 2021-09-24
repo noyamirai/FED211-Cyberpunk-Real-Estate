@@ -18,25 +18,27 @@
 
 <body class="results">
 	<main>
-
-		<section class="filters">
+		<!-- FILTER SECTION -->
+		<section id="filter-section">
 			<header>
 				<a href="index.html" class="btn btn--secondary">Home</a>
 			</header>
 
-			<section class="filters-container">
-				<div class="filters__title title-container">
+			<!-- FILTER CONTAINER -->
+			<section>
+				<header class="title-container title-container--filter">
 					<div>
 						<h3>Filters</h3>
 						<p>4 applied</p>
 					</div>
 					<a href="#">Reset</a>
-				</div>
+				</header>
 
+				<!-- FILTER FORM -->
 				<form action="#" method="post">
 
 					<fieldset class="form__section form__section--radio">
-						<h5 class="form__label">Property type</h5>
+						<h4 class="form__label">Property type</h4>
 
 						<label>One
 							<input type="radio" checked="checked" name="radio">
@@ -60,7 +62,7 @@
 
 					</fieldset>
 					<fieldset class="form__section form__section--radio">
-						<h5 class="form__label">Property type</h5>
+						<h4 class="form__label">Property type</h4>
 
 						<label>One
 							<input type="radio" checked="checked" name="radio">
@@ -85,21 +87,23 @@
 					</fieldset>
 				</form>
 			</section>
-
 		</section>
 
-		<section class="card-section-wrapper">
+		<!-- CARD SECTION -->
+		<section>
 			<header>
-
-				<div id="filter-menu-btn" class="filters__menu-btn">
+				<!-- MOBILE NAVIGATION -->
+				<!-- use nav here instead of div? -->
+				<div id="hamburger-menu" class="hamburger-menu">
 					<span id="bar-1"></span>
 					<span id="bar-2"></span>
 					<span id="bar-3"></span>
 				</div>
 
+				<!-- MOBILE HOME BUTTON -->
 				<a href="index.html" id="mobile-home-btn" class="btn btn--secondary">Home</a>
 
-				<!-- Search bar -->
+				<!-- SEARCH BAR -->
 				<form class="searchbar" action="index.html" method="post">
 					<fieldset class="form__section" id="district-selection">
 						<select id="district" name="district">
@@ -127,18 +131,20 @@
 					</fieldset>
 
 					<a href="results.html" class="btn">Search</a>
+					<!-- HIDE UNTIL SCRIPT IS ACTIVE -->
 					<!-- <button class="btn" type="button" name="button">Search</button> -->
 
 				</form>
 			</header>
 
-			<div class="card-section">
-				<div class="title-container">
+			<!-- CARD OVERVIEW -->
+			<section class="card-section">
+				<header class="title-container">
 					<h3>Apartments</h3>
 					<p>+300 results</p>
-				</div>
+				</header>
 
-				<ul class="cards">
+				<ul>
 					<li>
 						<a href="#">
 							<figure>
@@ -148,7 +154,7 @@
 								<p>€$1500<span>/ Month</span></p>
 
 								<figcaption>
-									<h5>Family Home 1</h5>
+									<h4>Family Home 1</h4>
 									<p>Rancho Coronado, Santo Domingo</p>
 								</figcaption>
 							</figure>
@@ -163,7 +169,7 @@
 								<p>€$1500<span>/ Month</span></p>
 
 								<figcaption>
-									<h5>Family Home 1</h5>
+									<h4>Family Home 1</h4>
 									<p>Rancho Coronado, Santo Domingo</p>
 								</figcaption>
 							</figure>
@@ -178,7 +184,7 @@
 								<p>€$1500<span>/ Month</span></p>
 
 								<figcaption>
-									<h5>Family Home 1</h5>
+									<h4>Family Home 1</h4>
 									<p>Rancho Coronado, Santo Domingo</p>
 								</figcaption>
 							</figure>
@@ -193,7 +199,7 @@
 								<p>€$1500<span>/ Month</span></p>
 
 								<figcaption>
-									<h5>Family Home 1</h5>
+									<h4>Family Home 1</h4>
 									<p>Rancho Coronado, Santo Domingo</p>
 								</figcaption>
 							</figure>
@@ -208,7 +214,7 @@
 								<p>€$1500<span>/ Month</span></p>
 
 								<figcaption>
-									<h5>Family Home 1</h5>
+									<h4>Family Home 1</h4>
 									<p>Rancho Coronado, Santo Domingo</p>
 								</figcaption>
 							</figure>
@@ -223,7 +229,7 @@
 								<p>€$1500<span>/ Month</span></p>
 
 								<figcaption>
-									<h5>Family Home 1</h5>
+									<h4>Family Home 1</h4>
 									<p>Rancho Coronado, Santo Domingo</p>
 								</figcaption>
 							</figure>
@@ -238,7 +244,7 @@
 								<p>€$1500<span>/ Month</span></p>
 
 								<figcaption>
-									<h5>Family Home 1</h5>
+									<h4>Family Home 1</h4>
 									<p>Rancho Coronado, Santo Domingo</p>
 								</figcaption>
 							</figure>
@@ -253,14 +259,14 @@
 								<p>€$1500<span>/ Month</span></p>
 
 								<figcaption>
-									<h5>Family Home 1</h5>
+									<h4>Family Home 1</h4>
 									<p>Rancho Coronado, Santo Domingo</p>
 								</figcaption>
 							</figure>
 						</a>
 					</li>
 				</ul>
-			</div>
+			</section>
 
 		</section>
 
