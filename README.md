@@ -94,7 +94,7 @@ over tijdstekort :D (werd vermeld in de algemene opdrachtbeschrijving van het
 </details>
 
 
-<!--
+
 
 
 ## Voortgang 1 (week 2)
@@ -103,26 +103,23 @@ over tijdstekort :D (werd vermeld in de algemene opdrachtbeschrijving van het
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+Ik was redelijk goed voorbereid voor het eerste voortgangsgesprek. Omdat ik al
+wat meer ervaring heb met front-end development was ik al snel klaar met de
+eerste pagina van mijn website.
 
 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
+Tijdens het voortgangsgesprek kreeg ik feedback van twee studentassistenten.
+Beide studenten waren onder de indruk van wat ik al had kunnen maken in zo'n
+korte tijd. Op een aantal plekken had ik classes gebruikt, hier werd natuurlijk
+naar gevraagd en na toelichting begrepen ze waarom ik classes gebruikte.
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+Ook heb ik voor het groeperen van content een div element gebruikt. Hier gaven ze aan dat het opzich niet fout is wat ik doe, maar het kan waarschijnlijk ook zonder een div. Als laatste vertelde ze dat ik mijn breakpoint script nog even goed moet bespreken met Robert, maar deze zal ik hoogst waarschijnlijk sowieso al verwijderen i.v.m. een bug.
+
+Samengevat:
+- Let op met (teveel) classes
+- Kijk of het gebruik van een div noodzakelijk is
+- Breakpoint script bespreken
 
 </details>
 
@@ -136,17 +133,18 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+Momenteel gaat het erg goed! Ik heb deze week (20 september) veel gewerkt aan de
+site. De tweede pagina is qua HTML zo goed als klaar. Er zijn hier en daar een
+aantal divs en andere elementen waar ik nog even goed naar moet kijken, maar
+dit is eenvoudig aan te passen. Ook is, naar mijn mening, de stylesheet een
+beetje een rommeltje... Hier zal ik deze week nog even aan werken zodat ik
+volgende week weer verder kan met de laatste aanpassingen en vervolgens het JS
+script voor de resultatenpagina.
 
 ### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+Wat ik voornamelijk wil weten is of de HTML structuur voor mijn resultatenpagina
+semantisch correct is. Wellicht dat er andere oplossingen zijn dat ik over het
+hoofd heb gezien. Ik heb de reslultatenpagina namelijk binnen 1 dag gemaakt :p.
 
 
 ### Verslag van meeting
@@ -162,7 +160,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 
 
-
+<!--
 ## Toegankelijkheidstest (week 4)
 
 <details>
