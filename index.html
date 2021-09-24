@@ -18,12 +18,15 @@
 
 <body class="home">
 	<header>
-		<section class="header__content">
+		<section>
 			<h1>Find your home in Night City</h1>
 			<h2>The city of dreams &mdash; The city of legends </h2>
 
-			<!-- Search bar -->
+			<!-- SEARCHBAR -->
 			<form class="searchbar" action="index.html" method="post">
+
+				<!-- TOGGLE BUTTONS -->
+				<!-- which elements to use here? -->
 				<div id="toggle-container" class="toggle">
 					<div id="toggle-sale" class="toggle__option toggle__option--active">
 						<p>For sale</p>
@@ -62,6 +65,7 @@
 				</fieldset>
 
 				<a href="results.html" class="btn">Search</a>
+				<!-- HIDE UNTIL SCRIPT IS ACTIVE -->
 				<!-- <button class="btn" type="button" name="button">Search</button> -->
 
 			</form>
@@ -73,12 +77,13 @@
 	</header>
 
 	<main>
-		<section class="about-night-city">
+		<!-- ABOUT NIGHT CITY -->
+		<section>
 			<picture>
 				<img src="./images/logos/night-city-hall-logo.svg" alt="">
 			</picture>
 
-			<!-- Container for grouping -->
+			<!-- WRAPPER -->
 			<div>
 				<h3>Why should you buy your new home in Night City?</h3>
 				<ul>
@@ -86,8 +91,9 @@
 						<picture class="icon">
 							<img src="./images/icons/free-icon.svg" alt="">
 						</picture>
-						<!-- give better class names -->
-						<div class="content">
+
+						<!-- CONTAINER FOR GROUPING -->
+						<div>
 							<h4>Part of the Free States</h4>
 							<p>Night City is a free city-state and is not under the jurisdiction of the NUSA government</p>
 						</div>
@@ -97,7 +103,8 @@
 							<img src="./images/icons/skyline-icon.svg" alt="">
 						</picture>
 
-						<div class="content">
+						<!-- CONTAINER FOR GROUPING -->
+						<div>
 							<h4>Modern metropolis</h4>
 							<p>Night City has wide streets and dense urban skyscrapers which are home to millions of residents</p>
 						</div>
@@ -107,7 +114,8 @@
 							<img src="./images/icons/train-icon.svg" alt="">
 						</picture>
 
-						<div class="content">
+						<!-- CONTAINER FOR GROUPING -->
+						<div>
 							<h4>High-Speed Railway Network</h4>
 							<p>Night City Area Rapid Transit offers many access points that form a net extending over the entire city</p>
 						</div>
@@ -117,7 +125,8 @@
 							<img src="./images/logos/samurai-logo.svg" alt="">
 						</picture>
 
-						<div class="content">
+						<!-- CONTAINER FOR GROUPING -->
+						<div>
 							<h4>The city where legends are born</h4>
 							<p>"There is only one path in Night City worth walking: the one that leads to the Afterlife."</p>
 						</div>
@@ -126,12 +135,14 @@
 			</div>
 		</section>
 
+		<!-- CARD SECTION -->
 		<section class="card-section">
-			<div class="title-container">
+			<header class="title-container">
 				<h3>Best Property Deals</h3>
 				<a href="#">View all properties</a>
-			</div>
+			</header>
 
+			<!-- CARDS -->
 			<ul>
 				<li>
 					<a href="#">
