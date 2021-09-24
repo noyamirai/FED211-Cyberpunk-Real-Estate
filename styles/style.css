@@ -827,9 +827,11 @@ html.small .icon {
 
     html.xsmall .card-section ul li { flex-basis: 100%; }
 
+    /* only show first 4 cards */
     html.medium .home .card-section ul li:nth-of-type(n+5),
     html.small .home .card-section ul li:nth-of-type(n+5) { display: none; }
 
+    /* only show first 3 cards */
     html.xsmall .home .card-section ul li:nth-of-type(n+4) { display: none; }
 
     html.medium .card-section ul li,
@@ -848,6 +850,7 @@ html.small .icon {
     /* #TODO convert to min-width */
     @media only screen and (max-width: 530px) {
       .card-section ul li { flex-basis: 100%!important; }
+      /* only show first 3 cards */
       .home .card-section ul li:nth-of-type(n+4) { display: none; }
     }
 
