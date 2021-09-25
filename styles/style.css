@@ -377,7 +377,7 @@ form { position: relative; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
 
   padding: 20px;
 
@@ -386,12 +386,12 @@ form { position: relative; }
   background-color: #FFFFFF;
 
   border: 2px solid #DCE1E8;
-  border-radius: 0 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
 
   z-index: 10;
 }
 
-.home .searchbar { bottom: -50px; }
+.home .searchbar { bottom: -78px; }
 
 .results .searchbar {
   display: none;
@@ -404,12 +404,6 @@ form { position: relative; }
   border-radius: 6px 6px 6px 6px;
 }
 
-html.xsmall .home .searchbar {
-  bottom: -78px;
-  flex-direction: column!important;
-  border-top-left-radius: 6px;
-}
-
   .searchbar .form__section {
     position: relative;
     width: 100%;
@@ -419,7 +413,9 @@ html.xsmall .home .searchbar {
     content: "";
     position: absolute;
 
-    left: -24px;
+    display: none;
+
+    left: 25px;
     top: 0;
     bottom: 0;
 
@@ -430,11 +426,9 @@ html.xsmall .home .searchbar {
     border-radius: 6px;
   }
 
+  #property-selection, #price-selection { display: none; }
+
   .results .searchbar .form__section::before { right: -15px; }
-
-  .searchbar .form__section:last-of-type::before { display: none; }
-
-  html.small .searchbar .form__section::before { display: none; }
 
   .searchbar .form__section + .form__section {
     padding-left: 50px;
@@ -445,24 +439,15 @@ html.xsmall .home .searchbar {
 
   .results .searchbar .form__section + .form__section { padding-left: 30px; }
 
-  .searchbar > .btn { margin-left: 20px; }
+  .searchbar > .btn {
+    width: 100%;
+    margin-top: 20px;
+  }
 
   .results .searchbar > .btn {
     font-size: 16px; font-size: 1.6rem!important;
     min-width: auto;
     padding: 12px 24px;
-  }
-
-  html.medium .searchbar > .btn,
-  html.small .searchbar > .btn {
-    width: auto;
-    font-size: 18px; font-size: 1.8rem;
-  }
-
-  html.xsmall .searchbar > .btn {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 20px;
   }
 
 /* =============================================================================
@@ -532,8 +517,8 @@ html.xsmall .home .searchbar {
   #MAIN
 ============================================================================= */
 main {
-  padding-top: 130px;
-  padding-bottom: 80px;
+  padding: 118px 0px 80px 0px;
+  margin: 0 16px;
 }
 
 .results main {
@@ -541,17 +526,8 @@ main {
   padding: 80px 0 0 0;
 }
 
-html.medium .home main,
-html.small .home main { padding-top: 100px; }
-html.xsmall .home main { padding-top: 118px; }
-
-html.medium .home main { margin: 0 5%; }
-html.small .home main { margin: 0 24px; }
-html.xsmall .home main { margin: 0 16px; }
-
 /* #SECTION INSIDE MAIN */
-section + section { margin-top: 80px; }
-html.small section + section { margin-top: 50px; }
+section + section { margin-top: 50px; }
 .results section + section { margin-top: 0!important; }
 
 /* =============================================================================
@@ -561,13 +537,10 @@ html.small section + section { margin-top: 50px; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column-reverse;
 
   width: 100%;
 }
-
-html.medium .home main > section:first-of-type,
-html.small .home main > section:first-of-type { flex-direction: column-reverse; }
 
   .home main > section:first-of-type h3 {
     border-bottom: 0;
@@ -582,15 +555,15 @@ html.small .home main > section:first-of-type { flex-direction: column-reverse; 
     justify-content: center;
 
     position: relative;
-    margin-right: 60px;
+    margin-top: 40px;
 
-    width: 50%;
-    height: 600px;
+    width: 100%;
+    height: 150px;
 
     background-color: blue;
     background-image: url('../images/martin-kocisek-buildings.jpeg');
     background-size: cover;
-    background-position: 30% center;
+    background-position: center 20%;
     background-repeat: no-repeat;
     border-radius: 6px;
   }
@@ -612,73 +585,25 @@ html.small .home main > section:first-of-type { flex-direction: column-reverse; 
     border-radius: 6px;
   }
 
-  html.medium .home main > section:first-of-type > picture,
-  html.small .home main > section:first-of-type > picture {
-    width: 100%;
-    height: 250px;
-    margin-right: 0;
-    background-position: center 20%;
-    margin-top: 60px;
-  }
-
-  html.xsmall .home main > section:first-of-type > picture {
-    height: 150px;
-    margin-top: 40px;
-  }
-
     .home main > section:first-of-type > picture img {
       position: relative;
-      width: 220px;
-      height: auto;
-    }
 
-    html.medium .home main > section:first-of-type > picture img,
-    html.small .home main > section:first-of-type > picture img {
-      height: 150px;
-      width: auto;
-    }
-
-    html.xsmall .home main > section:first-of-type > picture img {
       height: 100px;
       width: auto;
     }
 
   /* CONTENT CONTAINER */
-  .home main > section:first-of-type > div:last-of-type {
-    width: 50%;
-  }
-
-  html.medium .home main > section:first-of-type > div:last-of-type,
-  html.small .home main > section:first-of-type > div:last-of-type {
-    width: 100%;
-  }
+  .home main > section:first-of-type > div:last-of-type { width: 100%; }
 
     /* LIST OF REASONS */
     .home main > section:first-of-type ul li {
       display: flex;
       align-items: center;
+
+      width: 100%;
     }
-
-    html.medium .home main > section:first-of-type ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-
-      margin: -16px;
-    }
-
-    html.medium .home main > section:first-of-type ul li {
-      width: 50%;
-      padding: 16px;
-    }
-
-    html.small .home main > section:first-of-type ul li { width: 100%; }
 
     .home main > section:first-of-type ul li + li { margin-top: 40px; }
-
-    html.medium .home main > section:first-of-type ul li + li { margin: 0; }
-
 
 /* =============================================================================
   #ICON
@@ -699,13 +624,6 @@ html.small .home main > section:first-of-type { flex-direction: column-reverse; 
 }
 
 .icon + div { margin-left: 24px; }
-
-html.small .icon {
-  min-width: 40px;
-  max-height: 40px;
-  min-height: 40px;
-  max-height: 40px;
-}
 
   .icon img {
     width: 33px;
@@ -957,15 +875,15 @@ html.small .icon {
   #BUTTON
 ============================================================================= */
 .btn {
-  display: inline-block;
+  display: block;
 
   padding: 12px;
-  min-width: 120px;
+  width: 100%;
 
   color: #FFFFFF;
   text-align: center;
   font-weight: 700;
-  font-size: 18px; font-size: 1.8rem;
+  font-size: 16px; font-size: 1.6rem;
 
   background-color: #346CCF;
   border-radius: 6px;
@@ -974,14 +892,6 @@ html.small .icon {
   border: none;
   box-shadow: none;
   cursor: pointer;
-}
-
-html.small .btn {
-  display: block;
-  width: 100%;
-  font-size: 16px; font-size: 1.6rem;
-
-  padding: 12px;
 }
 
 .btn--secondary {
@@ -1000,15 +910,12 @@ html.small .results .btn { width: auto; }
   top: 0;
   left: 0;
 
-  display: flex;
+  display: none;
+  opacity: 0;
+
   transform: translate(-2px, calc(-100% - 2px));
 
   background-color: transparent;
-}
-
-html.xsmall .toggle {
-  display: none;
-  opacity: 0;
 }
 
   .toggle::before {
@@ -1118,6 +1025,16 @@ footer {
 ============================================================================= */
 /* #XSMALL SIZE */
 @media only screen and (min-width: 530px) {
+  .home main {
+    padding: 80px 0px 80px 0px;
+    margin: 0 24px;
+  }
+
+  .home main > section:first-of-type > picture { height: 250px;
+  }
+
+  .home main > section:first-of-type > picture img { height: 150px; }
+
   .title-container {
     align-items: center;
     flex-direction: row;
@@ -1125,6 +1042,25 @@ footer {
 
   .title-container a {
     margin-top: 0px;
+  }
+
+  .toggle {
+    display: flex;
+    opacity: 1;
+  }
+
+  .home .searchbar {
+    bottom: -50px;
+    border-radius: 0 6px 6px 6px;
+    flex-direction: row;
+  }
+
+  .searchbar > .btn {
+    margin-left: 20px;
+    margin-top: 0;
+    width: auto;
+    font-size: 18px; font-size: 1.8rem;
+    padding: 12px 20px;
   }
 }
 
@@ -1134,7 +1070,6 @@ footer {
     margin: 0 24px;
     padding-top: 150px;
   }
-
 
   /* FILTER SECTION */
   .results main > section:first-of-type {
@@ -1156,10 +1091,29 @@ footer {
   h1 { font-size: 36px; font-size: 3.6rem; }
   h2 { font-size: 22px; font-size: 2.2rem; }
 
-  .home > header > section:first-of-type { margin: 0 5%; }
+  /* .home > header > section:first-of-type { margin: 0 5%; } */
 
   #property-selection { display: inline-block; }
 
+  .searchbar .form__section + .form__section::before { display: block; }
+
+  .home main { margin: 0 5%; }
+
+  .home main > section:first-of-type ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin: -16px;
+  }
+
+  .home main > section:first-of-type ul li {
+    width: 50%;
+    padding: 16px;
+  }
+
+  .home main > section:first-of-type ul li + li { margin: 0; }
 
   /* FILTER SECTION */
   .results main > section:first-of-type {
@@ -1217,13 +1171,57 @@ footer {
 
   select { display: inline-block; }
 
+  .btn {
+    display: inline-block;
+    min-width: 120px;
+    font-size: 18px; font-size: 1.8rem;
+  }
+
   .home > header > section:first-of-type {
     margin: 0 10%;
     padding: 200px 0 120px 0px;
   }
 
-  .home main { margin: 0 10%; }
-  .results main { padding-top: 0px; }
+    .home main { margin: 0 10%; }
+    .results main { padding-top: 0px; }
+
+    .home main { padding: 130px 0px 80px 0px; }
+
+      /* ABOUT NIGTH CITY */
+      .home main > section:first-of-type { flex-direction: row; }
+
+        .home main > section:first-of-type > picture {
+          width: 50%;
+          height: 600px;
+
+          margin-top: 0;
+          margin-right: 60px;
+
+          background-position: 30% center;
+        }
+
+          .home main > section:first-of-type > picture img {
+            width: 220px;
+            height: auto;
+          }
+
+        .home main > section:first-of-type > div:last-of-type {
+          width: 50%;
+        }
+
+          .home main > section:first-of-type ul {
+            display: block;
+            margin: 0;
+          }
+
+            .home main > section:first-of-type ul li {
+              width: 100%;
+              padding: 0;
+            }
+
+            .home main > section:first-of-type ul li + li {
+              margin-top: 40px;
+            }
 
   #property-selection, #price-selection { display: inline-block; }
 
