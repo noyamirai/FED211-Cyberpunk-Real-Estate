@@ -526,7 +526,7 @@ main {
   display: flex;
   margin: 0;
 
-  padding: 80px ​0px 0px 0px;
+  padding: 80px 0px 0px 0px;
 }
 
 /* #SECTION INSIDE MAIN */
@@ -1128,7 +1128,7 @@ footer {
       padding: 50px 30px 30px 30px;
     }
 
-  .results main { padding: 100px 0 0 0; }
+  .results main { padding: 100px 0px 0px 0px!important; }
 
   .results .searchbar {
     display: flex;
