@@ -398,6 +398,7 @@ form { position: relative; }
   opacity: 0;
 
   position: relative;
+  flex-direction: row;
 
   padding: 12px;
 
@@ -428,7 +429,7 @@ form { position: relative; }
 
   #property-selection, #price-selection { display: none; }
 
-  .results .searchbar .form__section::before { right: -15px; }
+  .results .searchbar .form__section + .form__section::before { left: 15px; }
 
   .searchbar .form__section + .form__section {
     padding-left: 50px;
@@ -523,7 +524,9 @@ main {
 
 .results main {
   display: flex;
-  padding: 80px 0 0 0;
+  margin: 0;
+
+  padding: 80px ​0px 0px 0px;
 }
 
 /* #SECTION INSIDE MAIN */
@@ -663,6 +666,8 @@ section + section { margin-top: 50px; }
     left: 30px;
     top: 50%;
 
+    padding: 12px 20px;
+    width: auto;
     transform: translateY(-50%);
   }
 
@@ -678,22 +683,25 @@ section + section { margin-top: 50px; }
     margin: -16px;
   }
 
+  .results .card-section ul {
+    flex-direction: column;
+    margin: 0;
+  }
+
     .card-section ul li {
-      flex-basis: calc(100% / 3);
+      flex-basis: 100%;
       padding: 16px;
     }
 
-    html.xsmall .card-section ul li { flex-basis: 100%; }
+    .results .card-section ul li {
+      width: 100%;
+      padding: 0;
+    }
 
-    /* only show first 4 cards */
-    html.medium .home .card-section ul li:nth-of-type(n+5),
-    html.small .home .card-section ul li:nth-of-type(n+5) { display: none; }
+    .results .card-section ul li + li { margin-top: 24px; }
 
     /* only show first 3 cards */
-    html.xsmall .home .card-section ul li:nth-of-type(n+4) { display: none; }
-
-    html.medium .card-section ul li,
-    html.small .card-section ul li { flex-basis: calc(100% / 2); }
+    .home .card-section ul li:nth-of-type(n+4) { display: none; }
 
       .card-section ul li a {
         display: block;
@@ -703,18 +711,21 @@ section + section { margin-top: 50px; }
         transition: all 300ms ease-in-out;
       }
 
-      .card-section ul li a:hover { transform: scale(1.02); }
+      .results .card-section ul li a { width: 100%; }
 
-    /* #TODO convert to min-width */
-    @media only screen and (max-width: 530px) {
-      .card-section ul li { flex-basis: 100%!important; }
-      /* only show first 3 cards */
-      .home .card-section ul li:nth-of-type(n+4) { display: none; }
-    }
+      .card-section ul li a:hover { transform: scale(1.02); }
 
       .card-section figure {
         position: relative;
         text-align: right;
+      }
+
+      .results .card-section figure {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        width: 100%;
       }
 
         /* #CARD SECTION IMG CONTAINER */
@@ -722,6 +733,10 @@ section + section { margin-top: 50px; }
           display: block;
           background-color: #D8DDE6;
           border-radius: 6px;
+        }
+
+        .results .card-section figure > picture {
+          width: 25%;
         }
 
           .card-section figure > picture img {
@@ -741,8 +756,8 @@ section + section { margin-top: 50px; }
 
             border-radius: 6px;
 
-            font-size: 17px; font-size: 1.7rem;
             color: #346CCF;
+            font-size: 20px; font-size: 2.0rem;
             font-weight: 700;
 
             transform: translateY(calc(-100% - 16px));
@@ -750,31 +765,19 @@ section + section { margin-top: 50px; }
             right: 16px;
           }
 
-          html.small .card-section figure > picture + p {
-            font-size: 20px; font-size: 2.0rem;
+          .results .card-section figure > picture + p {
+            right: 0;
+            transform: none;
+            background-color: pink;
           }
 
           /* #PRICE PERIOD */
           .card-section figure > picture + p > span {
-            font-size: 15px; font-size: 1.5rem;
+            font-size: 17px; font-size: 1.7rem;
+
             color: #8C929C;
             font-weight: 400;
             margin-left: 4px;
-          }
-
-          html.small .card-section figure > picture + p {
-            font-size: 16px; font-size: 1.6rem;
-          }
-
-          /* #TODO convert to min-width */
-          @media only screen and (max-width: 530px) {
-            .card-section figure > picture + p {
-              font-size: 20px; font-size: 2.0rem!important;
-            }
-
-            .card-section figure > picture + p > span {
-              font-size: 17px; font-size: 1.7rem!important;
-            }
           }
 
         .card-section figure > figcaption {
@@ -782,20 +785,17 @@ section + section { margin-top: 50px; }
           text-align: left;
         }
 
+        .results .card-section figure > figcaption {
+          margin-left: 30px;
+        }
+
           .card-section figure > figcaption h4 {
             margin-bottom: 3px;
-            font-size: 18px; font: 1.8rem;
+            font-size: 20px; font: 2.0rem;
           }
 
-          /* override styles for specific breakpoint */
-          @media only screen and (max-width: 530px) {
-            .card-section figure > figcaption h4 {
-              font-size: 20px; font: 2.0rem;
-            }
-
-            .card-section figure > figcaption p {
-              font-size: 18px; font-size: 1.8rem;
-            }
+          .card-section figure > figcaption p {
+            font-size: 18px; font-size: 1.8rem;
           }
 
 /* =============================================================================
@@ -857,19 +857,11 @@ section + section { margin-top: 50px; }
     transform-origin: center;
   }
 
-  .hamburger-menu span + span {
-    margin-top: 5px;
-  }
+  .hamburger-menu span + span { margin-top: 5px; }
 
-  .open #bar-1 {
-    transform: rotate(-45deg) translate(-6px, 5px);
-  }
-
-  .open #bar-2 { opacity: 0;}
-
-  .open #bar-3 {
-    transform: rotate(45deg) translate(-6px, -5px);
-  }
+  .open span:first-of-type { transform: rotate(-45deg) translate(-6px, 5px); }
+  .open span:nth-of-type(2) { opacity: 0;}
+  .open span:last-of-type { transform: rotate(45deg) translate(-6px, -5px); }
 
 /* =============================================================================
   #BUTTON
@@ -901,8 +893,6 @@ section + section { margin-top: 50px; }
 }
 
 .results .btn { font-size: 16px; font-size: 1.6rem; }
-
-html.small .results .btn { width: auto; }
 
 /* #TOGGLE BUTTON */
 .toggle {
@@ -983,35 +973,23 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+
+    width: 100%;
+
     padding: 0 30px 60px 30px;
   }
 
-  /* #TODO conver to min-width */
-  @media only screen and (max-width: 530px) {
-    footer > picture { flex-direction: column; }
-    footer > picture img + img { margin-top: 60px; }
-  }
-
-  html.medium footer > picture { width: 85%; }
-  html.small footer > picture { width: 100%; }
-
     footer > picture img {
-      height: 90px;
-      width: auto;
-    }
-
-    html.small footer > picture img {
       height: 80px;
       width: auto;
     }
 
-    footer > picture img + img { margin-left: 150px; }
-
-    html.medium footer > picture img + img,
-    html.small footer > picture img + img { margin-left: 0; }
-
+    footer > picture img + img {
+      margin-left: 0px;
+      margin-top: 60px;
+    }
 
   footer > section {
     background-color: #FFF;
@@ -1030,8 +1008,7 @@ footer {
     margin: 0 24px;
   }
 
-  .home main > section:first-of-type > picture { height: 250px;
-  }
+  .home main > section:first-of-type > picture { height: 250px; }
 
   .home main > section:first-of-type > picture img { height: 150px; }
 
@@ -1040,9 +1017,7 @@ footer {
     flex-direction: row;
   }
 
-  .title-container a {
-    margin-top: 0px;
-  }
+  .title-container a { margin-top: 0px; }
 
   .toggle {
     display: flex;
@@ -1071,6 +1046,20 @@ footer {
     padding-top: 150px;
   }
 
+  .results .btn { width: auto; }
+
+  .card-section ul li { flex-basis: calc(100% / 2); }
+
+  .home .card-section ul li:nth-of-type(n+4) { display: flex; }
+
+  /* only show first 4 cards */
+  .home .card-section ul li:nth-of-type(n+5) { display: none; }
+
+  .card-section figure > picture + p { font-size: 17px; font-size: 1.7rem; }
+  .card-section figure > picture + span { font-size: 15px; font-size: 1.5rem; }
+  .card-section figure > figcaption h4 { font-size: 18px; font: 1.8rem; }
+  .card-section figure > figcaption p { font-size: 16px; font-size: 1.6rem; }
+
   /* FILTER SECTION */
   .results main > section:first-of-type {
     width: 60%;
@@ -1084,6 +1073,9 @@ footer {
 
     /* FILTER CONTAINER */
     .results main > section:first-of-type > section { padding: 30px; }
+
+    footer > picture { flex-direction: row; }
+    footer > picture img + img { margin-top: 0px; }
 }
 
 /* #MEDIUM SIZE */
@@ -1114,6 +1106,8 @@ footer {
   }
 
   .home main > section:first-of-type ul li + li { margin: 0; }
+
+  .home .card-section ul li:nth-of-type(n+5) { display: flex; }
 
   /* FILTER SECTION */
   .results main > section:first-of-type {
@@ -1158,6 +1152,9 @@ footer {
     display: none;
     opacity: 0;
   }
+
+  footer > picture { width: 85%; }
+  footer > picture img { height: 90px; }
 }
 
 /* #LARGE SIZE */
@@ -1183,9 +1180,9 @@ footer {
   }
 
     .home main { margin: 0 10%; }
-    .results main { padding-top: 0px; }
 
     .home main { padding: 130px 0px 80px 0px; }
+    .results main { padding: 0; }
 
       /* ABOUT NIGTH CITY */
       .home main > section:first-of-type { flex-direction: row; }
@@ -1205,9 +1202,7 @@ footer {
             height: auto;
           }
 
-        .home main > section:first-of-type > div:last-of-type {
-          width: 50%;
-        }
+        .home main > section:first-of-type > div:last-of-type { width: 50%; }
 
           .home main > section:first-of-type ul {
             display: block;
@@ -1219,9 +1214,9 @@ footer {
               padding: 0;
             }
 
-            .home main > section:first-of-type ul li + li {
-              margin-top: 40px;
-            }
+            .home main > section:first-of-type ul li + li { margin-top: 40px; }
+
+      .card-section ul li { flex-basis: calc(100% / 3); }
 
   #property-selection, #price-selection { display: inline-block; }
 
@@ -1279,6 +1274,9 @@ footer {
   .results main > section:first-of-type > section  {
     border-right: 2px solid #DCE1E8;
   }
+
+  footer > picture { width: auto; }
+  footer > picture img + img { margin-left: 150px; }
 }
 
 /* #XLARGE SIZE */
