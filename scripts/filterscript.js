@@ -7,7 +7,6 @@ const cards = document.querySelector("#card-results");
 const bodyElement = document.querySelector("body");
 let newCard;
 
-
 hamburgerMenu.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("open");
     filterMenu.classList.toggle("open");
@@ -19,7 +18,20 @@ const nightCityProperties = [{id: 1,
                             type: "Rent",
                             propertyType: "Apartment",
                             price: 1500,
-                            status: "Available",
+                            status: "Unfurnished, Immediately Available",
+                            city: "Santo Domingo",
+                            district: "Arroyo",
+                            bedroomAmount: "2",
+                            bathroomAmount: "1",
+                            garageAmount: "1"
+                            },
+                            {id: 2,
+                            imageUrl: "dummy-building.png",
+                            title: "Family Test Home 2",
+                            type: "Rent",
+                            propertyType: "Apartment",
+                            price: 1500,
+                            status: "Unfurnished, Immediately Available",
                             city: "Santo Domingo",
                             district: "Arroyo",
                             bedroomAmount: "2",
@@ -28,21 +40,37 @@ const nightCityProperties = [{id: 1,
                             }];
 
 window.addEventListener("load", () => {
-
   createCards();
+
+  // GET SELECTIONS
+  var selectedDistrict = localStorage.getItem("selectedDistrict");
+  var selectedType = localStorage.getItem("selectedType");
+  var selectedPropertyType = localStorage.getItem("selectedPropertyType");
 
 });
 
+let arrayItem = [];
 
 function createCards() {
   let property;
+  let count = 0;
 
   for (let i = 0; i < nightCityProperties.length; i++) {
+    count++;
     property = nightCityProperties[i];
 
     newCard = document.createElement("li");
     newCard.id = property.id;
     cards.appendChild(newCard);
+
+    // createElement("li", cards);
+    // createElement("a", arrayItem[0]);
+    // createElement("figure", arrayItem[1]);
+
+    // createElement("a", arrayItem[0]);
+
+    // createElement("figure", arrayItem[count - 1]);
+    // createElement("picture", arrayItem[count - 1]);
 
     let cardAnchor = document.createElement("a");
     newCard.appendChild(cardAnchor);
@@ -150,7 +178,11 @@ function createCards() {
         detailListItem.appendChild(garageAmount);
       }
     }
-
-
   }
+}
+
+function createElement(type, parent) {
+  let element = document.createElement(type);
+  parent.appendChild(element);
+  arrayItem.push(element);
 }

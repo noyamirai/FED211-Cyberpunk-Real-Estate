@@ -23,7 +23,7 @@
 			<h2>The city of dreams &mdash; The city of legends </h2>
 
 			<!-- SEARCHBAR -->
-			<form class="searchbar" action="index.html">
+			<form class="searchbar" action="results.html">
 
 				<!-- TOGGLE BUTTONS -->
 				<!-- radio button -->
@@ -38,20 +38,26 @@
 
 				<fieldset class="form__section" id="district-selection">
 					<label class="form__label form__label-small" for="district">District</label>
-					<select id="district" name="district">
-						<option value="volvo">Santo Domingo</option>
-						<option value="saab">Saab</option>
-						<option value="fiat">Fiat</option>
-						<option value="audi">Audi</option>
+					<select id="districts" name="district">
+						<option value="badlands">The Badlands</option>
+						<option value="city-center">City Center</option>
+						<option value="heywood">Heywood</option>
+						<option value="pacifica">Pacifica</option>
+						<option value="santo-domingo">Santo Domingo</option>
+						<option value="watson">Watson</option>
+						<option value="westbrook">Westbrook</option>
 					</select>
 				</fieldset>
 				<fieldset class="form__section" id="property-selection">
 					<label class="form__label form__label-small" for="property-type">Propert type</label>
 					<select id="property-type" name="property-type">
-						<option value="volvo">Apartment (High Rise)</option>
-						<option value="saab">Saab</option>
-						<option value="fiat">Fiat</option>
-						<option value="audi">Audi</option>
+						<option value="apartment-high">Apartment (High Rise)</option>
+						<option value="aprtment-mid">Apartment (Mid Rise)</option>
+						<option value="office-space">Office Space</option>
+						<option value="studio">Studio</option>
+						<option value="single-family">Single Family</option>
+						<option value="multi-family">Multi-Family</option>
+						<option value="villas">Villas</option>
 					</select>
 				</fieldset>
 				<fieldset class="form__section" id="price-selection">
@@ -64,9 +70,9 @@
 					</select>
 				</fieldset>
 
-				<a href="results.html" class="btn">Search</a>
+				<!-- <a href="results.html" class="btn">Search</a> -->
 				<!-- HIDE UNTIL SCRIPT IS ACTIVE -->
-				<!-- <button class="btn" type="button" name="button">Search</button> -->
+				<button class="btn" type="submit" name="button">Search</button>
 
 			</form>
 		</section>
@@ -251,7 +257,8 @@
 	</footer>
 
 	<!-- <script src="scripts/breakpoints.js"></script> -->
-	<script src="scripts/togglescript.js"></script>
+	<!-- <script src="scripts/togglescript.js"></script> -->
+	<script src="scripts/searchscript.js"></script>
 </body>
 
 </html>
