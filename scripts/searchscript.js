@@ -1,8 +1,17 @@
-console.log("TOGGLE SCRIPT ACTIVE");
+console.log("SEARCH SCRIPT ACTIVE");
+
+const formElement = document.querySelector("form");
+const districtSelection = document.querySelector("#districts");
+const propertyTypeSelection = document.querySelector("#property-selection");
+// const priceRangeSelection = document.querySelector("#price-selection");
 
 const toggleContainer = document.querySelector("#toggle-container");
 const toggleSaleBtn = document.querySelector("#toggle-sale");
 const toggleRentBtn = document.querySelector("#toggle-rent");
+
+window.addEventListener("load", () => {
+  localStorage.clear();
+});
 
 toggleSaleBtn.addEventListener("click", function() {
   console.log('sale btn clicked');
@@ -45,6 +54,24 @@ toggleContainer.addEventListener("keyup", function(event) {
     }
   }
 });
+
+formElement.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (toggleRentBtn.classList.contains("toggle__option--active")) {
+    localStorage.setItem("selectedType", "Rent");
+  } else if (toggleSaleBtn.classList.contains("toggle__option--active")) {
+    localStorage.setItem("selectedType", "Sale");
+  }
+
+  localStorage.setItem("selectedDistrict", districtSelection.value);
+  localStorage.setItem("selectedPropertyType", propertyTypeSelection.value);
+  // localStorage.setItem("selectedPriceRange", priceRangeSelection.value);
+
+  window.location.href = "results.html";
+
+});
+
 
 // BRON: https://stackoverflow.com/questions/6833914/how-to-prevent-the-confirm-form-resubmission-dialog
 if ( window.history.replaceState ) {

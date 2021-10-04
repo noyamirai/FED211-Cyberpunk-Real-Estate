@@ -107,6 +107,11 @@ a {
   text-decoration: none;
 }
 
+a:focus {
+  background-color: #deeeff;
+  outline: none;
+}
+
 strong { font-weight: 700; }
 
 em, i { font-style: italic; }
@@ -245,8 +250,10 @@ form { position: relative; }
     font-weight: 700;
 
     outline: none;
-    border: none;
     cursor: pointer;
+    border: none;
+
+    border-radius: 5px;
 
     /* BRON: https://stackoverflow.com/questions/14218307/select-arrow-style-change */
     appearance: none;
@@ -256,7 +263,13 @@ form { position: relative; }
     background: transparent url("../images/icons/dropdown-arrow-icon.svg");
     background-repeat: no-repeat;
     background-position-x: 100%;
-    background-position-y: 5px;
+    background-position-y: 4px;
+
+    transition: all 200ms ease-in-out;
+  }
+
+  select:focus, input:focus {
+    background-color: #f1f2f3;
   }
 
   .results select { font-size: 16px; font-size: 1.6rem; }
@@ -674,7 +687,7 @@ section + section { margin-top: 50px; }
 /* #CARD SECTION */
 .results .card-section { padding: 30px; }
 
-  .card-section ul {
+  .card-section > ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -683,49 +696,36 @@ section + section { margin-top: 50px; }
     margin: -16px;
   }
 
-  .results .card-section ul {
-    flex-direction: column;
-    margin: 0;
-  }
-
-    .card-section ul li {
+    .card-section > ul > li {
       flex-basis: 100%;
       padding: 16px;
     }
 
-    .results .card-section ul li {
-      width: 100%;
-      padding: 0;
-    }
-
-    .results .card-section ul li + li { margin-top: 24px; }
 
     /* only show first 3 cards */
-    .home .card-section ul li:nth-of-type(n+4) { display: none; }
+    .home .card-section > ul > li:nth-of-type(n+4) { display: none; }
 
-      .card-section ul li a {
+      .card-section > ul > li a {
         display: block;
 
         color: #8C929C;
 
         transition: all 300ms ease-in-out;
+        border: 2px solid transparent;
+        border-radius: 6px;
       }
 
-      .results .card-section ul li a { width: 100%; }
+      .card-section > ul > li a:hover { transform: scale(1.02); }
 
-      .card-section ul li a:hover { transform: scale(1.02); }
+      .card-section > ul > li a:focus {
+        background-color: #FFF;
+        transform: scale(1.02);
+        border: 2px solid #c5d8f9;
+      }
 
       .card-section figure {
         position: relative;
         text-align: right;
-      }
-
-      .results .card-section figure {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        width: 100%;
       }
 
         /* #CARD SECTION IMG CONTAINER */
@@ -733,10 +733,6 @@ section + section { margin-top: 50px; }
           display: block;
           background-color: #D8DDE6;
           border-radius: 6px;
-        }
-
-        .results .card-section figure > picture {
-          width: 25%;
         }
 
           .card-section figure > picture img {
@@ -747,7 +743,7 @@ section + section { margin-top: 50px; }
           }
 
           /* #PRICE TAG */
-          .card-section figure > picture + p {
+          .price {
             display: inline-flex;
             align-items: center;
 
@@ -760,19 +756,16 @@ section + section { margin-top: 50px; }
             font-size: 20px; font-size: 2.0rem;
             font-weight: 700;
 
-            transform: translateY(calc(-100% - 16px));
             position: absolute;
+          }
+
+          .card-section figure > picture + .price {
+            transform: translateY(calc(-100% - 16px));
             right: 16px;
           }
 
-          .results .card-section figure > picture + p {
-            right: 0;
-            transform: none;
-            background-color: pink;
-          }
-
           /* #PRICE PERIOD */
-          .card-section figure > picture + p > span {
+          .card-section figure > picture + .price > span {
             font-size: 17px; font-size: 1.7rem;
 
             color: #8C929C;
@@ -780,13 +773,11 @@ section + section { margin-top: 50px; }
             margin-left: 4px;
           }
 
+          .card-section figure > figcaption > div > .price { display: none; }
+
         .card-section figure > figcaption {
           margin-top: 16px;
           text-align: left;
-        }
-
-        .results .card-section figure > figcaption {
-          margin-left: 30px;
         }
 
           .card-section figure > figcaption h4 {
@@ -796,6 +787,51 @@ section + section { margin-top: 50px; }
 
           .card-section figure > figcaption p {
             font-size: 18px; font-size: 1.8rem;
+          }
+
+          .card-section figure > figcaption > div {
+            margin-bottom: 12px;
+          }
+
+          /* PROPERTY DETAILS */
+          .card-section figure ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            margin: -4px;
+            padding-top: 10px;
+            border-top: 2px solid #DCE1E8;
+          }
+
+            .card-section figure ul li {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding: 4px;
+            }
+
+            /* .card-section figure ul li + li { margin-left: 30px; } */
+
+              .card-section figure ul li > img {
+                width: 24px;
+                height: auto;
+              }
+
+              .card-section figure ul li > img + p {
+                margin-left: 10px;
+              }
+
+          /* PROPERTY STATUS */
+          .status {
+            display: none;
+
+            padding: 8px 10px;
+            border: 2px solid #DCE1E8;
+            border-radius: 6px;
+
+            align-self: flex-start;
           }
 
 /* =============================================================================
@@ -866,6 +902,18 @@ section + section { margin-top: 50px; }
 /* =============================================================================
   #BUTTON
 ============================================================================= */
+button {
+  outline: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  font-size: 16px; font-size: 1.6rem;
+
+  margin: 0;
+  padding: 0;
+}
+
 .btn {
   display: block;
 
@@ -879,17 +927,36 @@ section + section { margin-top: 50px; }
 
   background-color: #346CCF;
   border-radius: 6px;
+  border: 2px solid #346CCF;
 
   outline: none;
-  border: none;
   box-shadow: none;
   cursor: pointer;
+
+  transition: all 300ms ease-in-out;
+}
+
+.btn:hover, .btn:focus { transform: scale(1.02); }
+
+.btn:hover {
+  background-color: #2357b3;
+  border: 2px solid #2357b3;
+ }
+
+.btn:focus {
+  border: 2px solid #a6c3ef;
+  background-color: #346CCF;
 }
 
 .btn--secondary {
   border: 2px solid #DCE1E8;
   background-color: #FFF;
   color: #346CCF;
+}
+
+.btn--secondary:hover, .btn--secondary:focus {
+  border: 2px solid #346CCF;
+  background-color: #FFF;
 }
 
 .results .btn { font-size: 16px; font-size: 1.6rem; }
@@ -903,9 +970,15 @@ section + section { margin-top: 50px; }
   display: none;
   opacity: 0;
 
-  transform: translate(-2px, calc(-100% - 2px));
+  transform: translate(-2px, calc(-100% - 1.5px));
 
   background-color: transparent;
+}
+
+/* how to do this for accessibility */
+.toggle:focus::before {
+  background-color: #346CCF;
+  border: 2px solid #a6c3ef;
 }
 
   .toggle::before {
@@ -928,6 +1001,7 @@ section + section { margin-top: 50px; }
     transform: translateX(100%);
     border-top-right-radius: 6px;
     border-top-left-radius: 0px;
+    background-color: #346CCF;
   }
 
   .toggle__option {
@@ -1048,18 +1122,18 @@ footer {
 
   .results .btn { width: auto; }
 
-  .card-section ul li { flex-basis: calc(100% / 2); }
+  .card-section > ul > li { flex-basis: calc(100% / 2); }
 
-  .home .card-section ul li:nth-of-type(n+4) { display: flex; }
+  .home .card-section > ul > li:nth-of-type(n+4) { display: flex; }
 
   /* only show first 4 cards */
-  .home .card-section ul li:nth-of-type(n+5) { display: none; }
+  .home .card-section > ul > li:nth-of-type(n+5) { display: none; }
 
   .card-section figure > picture + p { font-size: 17px; font-size: 1.7rem; }
   .card-section figure > picture + span { font-size: 15px; font-size: 1.5rem; }
   .card-section figure > figcaption h4 { font-size: 18px; font: 1.8rem; }
   .card-section figure > figcaption p { font-size: 16px; font-size: 1.6rem; }
-
+  .card-section figure ul li:nth-of-type(n+3) {display: none; }
   /* FILTER SECTION */
   .results main > section:first-of-type {
     width: 60%;
@@ -1107,7 +1181,100 @@ footer {
 
   .home main > section:first-of-type ul li + li { margin: 0; }
 
-  .home .card-section ul li:nth-of-type(n+5) { display: flex; }
+  .home .card-section > ul > li:nth-of-type(n+5) { display: flex; }
+  .results .card-section figure > picture + .price { display: none; }
+  .card-section figure ul li:nth-of-type(n+3) {display: flex; }
+
+  .results .card-section > ul {
+    flex-direction: column;
+    margin: 0;
+  }
+
+    .results .card-section > ul > li {
+      width: 100%;
+      padding: 0;
+    }
+
+    .results .card-section > ul > li + li {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 2px solid #DCE1E8;
+    }
+
+      .results .card-section > ul > li a { width: 100%; }
+
+    .results .card-section figure {
+      display: flex;
+      flex-direction: row;
+
+      width: 100%;
+    }
+
+      .results .card-section figure > picture { width: 25%; }
+
+      .card-section figure > figcaption > div {
+        position: relative;
+        margin: 0;
+      }
+
+        .results .card-section figure > figcaption > div > .price {
+          display: inline-flex;
+          right: 0;
+          top: 50%;
+
+          transform: translateY(-50%);
+
+          font-size: 20px; font-size: 2.0rem;
+
+          padding: 0;
+        }
+
+
+        .results .card-section figure .price > span {
+          font-size: 18px; font-size: 1.8rem;
+        }
+
+        .results .card-section figure > figcaption {
+          margin-left: 0px;
+          margin-top: 0px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          padding: 12px 30px;
+
+          width: 75%;
+        }
+
+        /* PROPERTY DETAILS */
+        .card-section figure ul {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+
+          border: none;
+          padding-top: 0;
+          margin: 0;
+        }
+
+          .card-section figure ul li { padding: 0; }
+
+          .card-section figure ul li:nth-of-type(3) img {
+            width: 24px;
+            height: auto;
+          }
+          .card-section figure ul li + li { margin-left: 30px; }
+
+            .card-section figure ul li > img {
+              width: 30px;
+              height: auto;
+            }
+
+            .card-section figure ul li > img + p {
+              margin-left: 10px;
+            }
 
   /* FILTER SECTION */
   .results main > section:first-of-type {
@@ -1182,7 +1349,7 @@ footer {
     .home main { margin: 0 10%; }
 
     .home main { padding: 130px 0px 80px 0px; }
-    .results main { padding: 0; }
+    .results main { padding: 0!important; }
 
       /* ABOUT NIGTH CITY */
       .home main > section:first-of-type { flex-direction: row; }
@@ -1216,7 +1383,18 @@ footer {
 
             .home main > section:first-of-type ul li + li { margin-top: 40px; }
 
-      .card-section ul li { flex-basis: calc(100% / 3); }
+      .card-section > ul > li { flex-basis: calc(100% / 3); }
+
+      .results .card-section figure > figcaption { width: 70%; }
+
+      .results .card-section figure > picture { width: 30%; }
+
+      .results .card-section figure .price {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .status { display: inline-block; }
 
   #property-selection, #price-selection { display: inline-block; }
 
